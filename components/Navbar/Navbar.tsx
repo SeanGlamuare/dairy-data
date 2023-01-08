@@ -11,7 +11,7 @@ const menu = [
 
 const Navbar = () => {
 	return (
-		<div className="flex justify-center px-8 py-8 bg-white h-36">
+		<div className="flex justify-center px-16 py-8 bg-white h-36">
 			<div className="flex justify-between w-full max-w-5xl 2xl:max-w-7xl">
 				<div className="flex items-center gap-2 title">
 					<div>
