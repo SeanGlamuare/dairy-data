@@ -30,8 +30,8 @@ const reasons = [
 
 const Why = () => {
 	return (
-		<div className="flex flex-col justify-center w-full gap-12 px-20 py-6 mt-10 text-neutral-700">
-			<div className="flex flex-col w-full max-w-5xl gap-y-12 2xl:max-w-7xl">
+		<div className="flex justify-center w-full gap-12 px-20 py-6 mt-10 text-neutral-700">
+			<div className="flex flex-col items-center justify-center w-full max-w-5xl gap-y-12 2xl:max-w-7xl">
 				<div className="w-full text-4xl">
 					<span className="font-bold">Why</span> Milk Recording
 				</div>
