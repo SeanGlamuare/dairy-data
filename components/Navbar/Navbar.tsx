@@ -24,7 +24,10 @@ const Navbar = () => {
 				<div className="flex items-center gap-5 text-sm">
 					{menu.map((tab: { name: string }) => {
 						return (
-							<div className="font-semibold cursor-pointer hover:underline hover:underline-offset-2">
+							<div
+								key={tab.name}
+								className="font-semibold cursor-pointer hover:underline hover:underline-offset-2"
+							>
 								{tab.name}
 							</div>
 						);
