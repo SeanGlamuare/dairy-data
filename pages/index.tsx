@@ -6,6 +6,7 @@ import Why from "../components/Why/Why";
 import Benefit from "../components/Benefit/Benefit";
 import AboutMR from "../components/AboutMR/AboutMR";
 import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
 
 const Home: NextPage = () => {
 	return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
 			<Benefit />
 			<AboutMR />
 			<Contact />
+			<Footer />
 		</>
 	);
 };
