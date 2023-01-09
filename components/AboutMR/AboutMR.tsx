@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutMR = () => {
 	return (
-		<div className="flex justify-center w-full mt-24 mb-20 text-neutral-800">
+		<div className="flex justify-center w-full px-20 mt-24 mb-20 text-neutral-800">
 			<div className="flex items-center justify-between w-full max-w-5xl gap-6 2xl:max-w-7xl">
 				<div className="flex flex-col w-[50%] gap-10 justify-start h-full">
 					<div className="text-4xl">

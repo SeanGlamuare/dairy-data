@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm/ContactForm";
 
 const Contact = () => {
 	return (
-		<div className="flex justify-center w-full mb-20 text-neutral-700">
+		<div className="flex justify-center w-full px-20 mb-20 text-neutral-700">
 			<div className="flex justify-between w-full max-w-5xl gap-10 p-5 2xl:max-w-7xl rounded-3xl bg-neutral-100 ">
 				<div className="flex w-1/2 overflow-hidden rounded-3xl 2xl:scale-x-110">
 					<Image
