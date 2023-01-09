@@ -5,6 +5,7 @@ import Hero from "../components/Hero/Hero";
 import Why from "../components/Why/Why";
 import Benefit from "../components/Benefit/Benefit";
 import AboutMR from "../components/AboutMR/AboutMR";
+import Contact from "../components/Contact/Contact";
 
 const Home: NextPage = () => {
 	return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
 			<Why />
 			<Benefit />
 			<AboutMR />
+			<Contact />
 		</>
 	);
 };
