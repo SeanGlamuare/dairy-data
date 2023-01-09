@@ -46,7 +46,6 @@ const Benefit = () => {
 						src="/benefit/benefit1.png"
 						width={450}
 						height={500}
-						layout="fill"
 						className={"rounded-3xl object-cover scale-x-95 xl:scale-100"}
 					/>
 				</div>
