@@ -8,7 +8,7 @@ const Contact = () => {
 			<div className="flex justify-between w-full max-w-5xl gap-10 p-5 2xl:max-w-7xl rounded-3xl bg-neutral-100 ">
 				<div className="flex w-1/2 overflow-hidden rounded-3xl 2xl:scale-x-110">
 					<Image
-						src="/contact/contact1.png"
+						src="/Contact/contact1.png"
 						width={500}
 						height={700}
 						alt="contact"
