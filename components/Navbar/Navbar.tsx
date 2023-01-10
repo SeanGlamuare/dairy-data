@@ -58,6 +58,7 @@ const Navbar = () => {
 							{menu.map((tab: { name: string }) => {
 								return (
 									<div
+										key={tab.name}
 										onClick={() => {
 											setShowSideMenu(false);
 										}}
