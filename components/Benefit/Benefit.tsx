@@ -38,9 +38,9 @@ const Benefit = () => {
 	});
 
 	return (
-		<div className="flex justify-center w-full h-full px-20 mb-10 mt-28 text-neutral-800">
-			<div className="flex justify-around w-full max-w-5xl gap-2 2xl:max-w-7xl">
-				<div className="flex justify-center w-1/2 gap-2 overflow-hidden lg:justify-start rounded-3xl">
+		<div className="flex justify-center w-full h-full px-10 mb-10 lg:px-20 mt-28 text-neutral-800">
+			<div className="flex flex-col justify-around w-full max-w-5xl gap-2 gap-y-10 lg:flex-row 2xl:max-w-7xl">
+				<div className="flex justify-center overflow-hidden lg:w-1/2 lg:justify-start rounded-3xl">
 					<Image
 						alt={"benefit"}
 						src="/benefit/benefit1.png"
@@ -49,9 +49,9 @@ const Benefit = () => {
 						className={"rounded-3xl object-cover scale-x-95 xl:scale-100"}
 					/>
 				</div>
-				<div className="flex flex-col w-1/2 gap-8">
-					<div className="text-4xl">
-						<span className="font-bold ">Benefit of</span> Milk Recording
+				<div className="flex flex-col gap-8 lg:w-1/2">
+					<div className="text-4xl text-center lg:text-left">
+						<span className="w-full font-bold">Benefit of</span> Milk Recording
 					</div>
 					<div className="flex flex-col gap-1">
 						{benefits.map((benefit: any) => {
