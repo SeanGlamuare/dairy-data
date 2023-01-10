@@ -30,7 +30,7 @@ const reasons = [
 
 const Why = () => {
 	return (
-		<div className="flex justify-center w-full gap-12 px-20 py-6 mt-20 text-neutral-700">
+		<div className="flex justify-center w-full gap-12 px-8 py-6 mt-20 lg:px-20 text-neutral-700">
 			<div className="flex flex-col items-center justify-center w-full max-w-5xl gap-y-12 2xl:max-w-7xl">
 				<div className="w-full text-4xl">
 					<span className="font-bold">Why</span> Milk Recording
@@ -41,10 +41,10 @@ const Why = () => {
 							return (
 								<div
 									key={reason.id}
-									className="flex gap-x-10 space-y-4 w-[45%]"
+									className="flex items-center lg:items-start gap-x-4 lg:gap-x-10 space-y-4 lg:w-[45%]"
 								>
 									<div className="relative flex items-center justify-center h-32 w-36 ">
-										<div className=" overflow-hidden p-0.5 border-2 border-blue-400 rounded-full realtive w-[105px] h-[105px]">
+										<div className=" overflow-hidden p-0.5 border-2 border-blue-400 rounded-full realtive w-24 h-24 lg:w-[105px] lg:h-[105px]">
 											<Image
 												src={`/why/${reason.img}.jpg`}
 												width={120}

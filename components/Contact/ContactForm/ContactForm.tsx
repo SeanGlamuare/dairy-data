@@ -49,7 +49,7 @@ const ContactForm = () => {
 						placeholder={"Enter your name"}
 					/>
 				</StyledDiv>
-				<div className="flex w-full gap-6">
+				<div className="flex flex-col w-full gap-6 lg:flex-row">
 					<StyledDiv className="flex flex-col">
 						<StyledLabel htmlFor="email" className="">
 							Email *
@@ -75,7 +75,7 @@ const ContactForm = () => {
 						/>
 					</StyledDiv>
 				</div>
-				<div className="flex w-full gap-6">
+				<div className="flex flex-col w-full gap-6 lg:flex-row">
 					<StyledDiv className="flex flex-col">
 						<StyledLabel htmlFor="eircode" className="">
 							Eircode{" "}
@@ -97,7 +97,7 @@ const ContactForm = () => {
 						/>
 					</StyledDiv>
 				</div>
-				<div className="flex w-full gap-6">
+				<div className="flex flex-col w-full gap-6 lg:flex-row">
 					<StyledDiv className="flex flex-col">
 						<StyledLabel htmlFor="parlour" className="">
 							Parlour Size and Make
