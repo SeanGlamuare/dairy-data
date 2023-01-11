@@ -5,7 +5,7 @@ import Button from "../Contact/Button/Button";
 const ContactDialog = () => {
 	return (
 		<div className="flex justify-center w-full px-0 lg:px-20">
-			<div className="flex flex-col items-center justify-between w-full px-6 py-4 lg:flex-row bg-neutral-100 rounded-3xl gap-y-8 text-neutral-800">
+			<div className="flex flex-col items-center justify-between w-full max-w-5xl px-6 py-4 2xl:max-w-7xl lg:flex-row bg-neutral-100 rounded-3xl gap-y-8 text-neutral-800">
 				<div className="flex items-center gap-4">
 					<div className="w-40 lg:w-max">
 						<Image
