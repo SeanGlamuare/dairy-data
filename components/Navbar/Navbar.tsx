@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import Button from "../Contact/Button/Button";
+import Link from "next/link";
 
 const menu = [
 	{ name: "Milk Recording" },
@@ -31,7 +32,7 @@ const Navbar = () => {
 								key={tab.name}
 								className="flex justify-center font-semibold cursor-pointer w-28 hover:underline hover:underline-offset-2"
 							>
-								{tab.name}
+								<a href={`#${tab.name}`}>{tab.name}</a>
 							</div>
 						);
 					})}
@@ -53,7 +54,7 @@ const Navbar = () => {
 						<div className="flex justify-end w-full">
 							<ImCross onClick={() => setShowSideMenu(false)} />
 						</div>
-						<div className="flex flex-col gap-y-6">
+						<div className="flex flex-col gap-y-8">
 							{menu.map((tab: { name: string }) => {
 								return (
 									<div
@@ -61,12 +62,15 @@ const Navbar = () => {
 										onClick={() => {
 											setShowSideMenu(false);
 										}}
-										className="flex justify-center w-full p-2 text-lg font-semibold cursor-pointer"
+										className="flex justify-center w-full p-2 text-lg font-semibold border-b cursor-pointer tex"
 									>
-										{tab.name}
+										<a href={`#${tab.name}`}>{tab.name}</a>
 									</div>
 								);
 							})}
+							<div className="flex justify-center w-full">
+								<Button />
+							</div>
 						</div>
 					</div>
 				</div>
