@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
+import Button from "../Contact/Button/Button";
 
 const menu = [
 	{ name: "Milk Recording" },
@@ -34,9 +35,7 @@ const Navbar = () => {
 							</div>
 						);
 					})}
-					<div className="p-2 px-8 text-white rounded-full cursor-pointer bg-gradient-to-b from-neutral-600 w-36 flex justify-center to-neutral-900 hover:shadow-lg hover:shadow-black/25 active:scale-[.97]">
-						Contact Us
-					</div>
+					<Button />
 				</div>
 				<div
 					onClick={() => setShowSideMenu(true)}
