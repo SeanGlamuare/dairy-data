@@ -35,6 +35,7 @@ const ContactForm = () => {
 			onSubmit={handleSubmit((data) => {
 				console.log(data);
 			})}
+			className=""
 		>
 			<div className="flex flex-col w-full gap-4">
 				<StyledDiv className="flex flex-col">
