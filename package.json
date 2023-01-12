@@ -22,7 +22,8 @@
 		"react-hook-form": "^7.41.5",
 		"react-icons": "^4.7.1",
 		"recoil": "^0.7.6",
-		"styled-components": "^5.3.6"
+		"styled-components": "^5.3.6",
+		"uuid": "^9.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "18.11.18",

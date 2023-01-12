@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
 import { sendMail } from "../../../utils/email";
 import axios from "axios";
+import { useRecoilState } from "recoil";
+import { contactSuccessState } from "../atom/atom";
+import { contactModalState } from "../../ContactModal/atom/atom";
+import Spinner from "../../Spinner/Spinner";
 
 const StyledLabel = styled.label`
 	font-weight: bold;
@@ -30,26 +34,53 @@ const StyledInput = styled.input`
 `;
 
 const ContactForm = () => {
-	const { register, handleSubmit } = useForm();
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm();
+	const [contactSuccess, setContactSuccess] =
+		useRecoilState(contactSuccessState);
+
+	const [contactModal, setContactModal] = useRecoilState(contactModalState);
+
+	const [loading, setLoading] = useState<Boolean>(false);
 
 	return (
 		<form
 			onSubmit={handleSubmit(async (data) => {
+				setLoading(true);
 				console.log(data);
-				await axios({
+				const { data: axiosData } = await axios({
 					method: "POST",
 					url: "/api/contact/sendInfo",
 					data: { data },
 				});
+				if (axiosData.success) {
+					setContactSuccess(true);
+					setContactModal(false);
+				}
+				setLoading(false);
 			})}
 			className=""
 		>
 			<div className="flex flex-col w-full gap-4">
+				<>
+					{!!Object.keys(errors).length && (
+						<div className="text-sm text-red-500 md:text-base">
+							*Please fill out all the required fields
+						</div>
+					)}
+				</>
 				<StyledDiv className="flex flex-col">
-					<StyledLabel className="" htmlFor="name">
+					<StyledLabel
+						className={`${errors.name && "text-red-500 "}`}
+						htmlFor="name"
+					>
 						Name *
 					</StyledLabel>
 					<StyledInput
+						className=""
 						{...register("name", {
 							required: "This field is required",
 						})}
@@ -59,7 +90,10 @@ const ContactForm = () => {
 				</StyledDiv>
 				<div className="flex flex-col w-full gap-6 lg:flex-row">
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="email" className="">
+						<StyledLabel
+							htmlFor="email"
+							className={`${errors.email && "text-red-500 "}`}
+						>
 							Email *
 						</StyledLabel>
 						<StyledInput
@@ -71,7 +105,10 @@ const ContactForm = () => {
 						/>
 					</StyledDiv>
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="phone" className="">
+						<StyledLabel
+							htmlFor="phone"
+							className={`${errors.phone && "text-red-500 "}`}
+						>
 							Phone Number *
 						</StyledLabel>
 						<StyledInput
@@ -141,15 +178,27 @@ const ContactForm = () => {
 						id="Agree"
 						{...register("agree", { required: "must be checked" })}
 						type="checkbox"
-						className="cursor-pointer border-neutral-200 ring-inset ring-black/20"
+						className="cursor-pointer border-neutral-200 ring-black/20"
 					/>
-					<label htmlFor="Agree">
+					<label
+						htmlFor="Agree"
+						className={`${errors.agree && "text-red-500"}`}
+					>
 						I agree that the data I submit will be collected and stored
 					</label>
 				</div>{" "}
 				<div className="w-40">
-					<button className="p-2 px-6 w-36 text-white rounded-full cursor-pointer bg-gradient-to-b from-neutral-600 flex justify-center to-neutral-900 hover:shadow-lg hover:shadow-black/25 active:scale-[.98]">
-						Submit
+					<button
+						disabled={!!loading}
+						className="p-2 px-6 w-36 disabled:from-neutral-500 disabled:to-neutral-500 text-white rounded-full disabled:cursor-not-allowed disabled:shadow-none cursor-pointer bg-gradient-to-b from-neutral-600 flex justify-center to-neutral-900 hover:shadow-lg h-12 items-center hover:shadow-black/25 active:scale-[.98]"
+					>
+						{!loading ? (
+							"Submit"
+						) : (
+							<div className="scale-[55%] ">
+								<Spinner color={"after:bg-white"} />
+							</div>
+						)}
 					</button>
 				</div>
 			</div>

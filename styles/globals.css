@@ -9,3 +9,17 @@ html {
 body {
 	overflow-x: hidden;
 }
+
+.contactSuccess {
+	animation: popUp both ease-in-out 0.5s;
+}
+
+@keyframes popUp {
+	from {
+		bottom: -200px;
+	}
+
+	to {
+		bottom: 0;
+	}
+}
