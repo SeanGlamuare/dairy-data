@@ -14,7 +14,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 		return res.status(400).send("Missing data");
 	}
 
-	await sendMail(data);
+	await sendMail(data).catch((err) => {
+		console.log(err);
+		return res.status(500).json({ success: false });
+	});
 
 	return res.status(200).json({ success: true });
 };
