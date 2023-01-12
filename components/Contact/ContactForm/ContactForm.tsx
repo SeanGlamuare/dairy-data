@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
+import { sendMail } from "../../../utils/email";
+import axios from "axios";
 
 const StyledLabel = styled.label`
 	font-weight: bold;
@@ -32,8 +34,13 @@ const ContactForm = () => {
 
 	return (
 		<form
-			onSubmit={handleSubmit((data) => {
+			onSubmit={handleSubmit(async (data) => {
 				console.log(data);
+				await axios({
+					method: "POST",
+					url: "/api/contact/sendInfo",
+					data: { data },
+				});
 			})}
 			className=""
 		>
@@ -125,17 +132,14 @@ const ContactForm = () => {
 					<textarea
 						id="message"
 						{...register("message")}
-						rows={4}
 						className="h-40 p-2 border border-black/10 text-sm rounded outline-none max-h-24 min-h-[6rem] placeholder:text-xs placeholder:font-bold placeholder:text-black/20"
-						minLength={4}
-						maxLength={4}
 						placeholder={"Enter your message"}
 					/>
 				</StyledDiv>
 				<div className="flex gap-2 text-sm text-neutral-400">
 					<input
 						id="Agree"
-						{...register("agree")}
+						{...register("agree", { required: "must be checked" })}
 						type="checkbox"
 						className="cursor-pointer border-neutral-200 ring-inset ring-black/20"
 					/>
