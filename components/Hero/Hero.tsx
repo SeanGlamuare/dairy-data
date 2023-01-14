@@ -28,17 +28,17 @@ const Hero = () => {
 					layout={"fill"}
 				/>
 			</div>
-			<div className="absolute top-0 z-10 flex items-end justify-center w-full h-full px-4 pb-20 text-white lg:items-center md:px-20 gradient-bg">
+			<div className="absolute top-0 z-10 flex items-end justify-center w-full h-full px-4 pb-20 text-white lg:pb-0 lg:items-center md:px-20 gradient-bg">
 				<div className="flex flex-col max-w-6xl gap-y-4 gap-x-10 2xl:max-w-7xl">
 					<div className="text-[40px] md:text-6xl xl:text-[88px] text-left font-bold text-white max-w-full  lg:max-w-[60%]">
 						The Future of Farming is Now
 					</div>
-					<div className="xl:text-2xl md:text-xl  flex-nowrap lg:max-w-[50%] max-w-[95%]">
+					<div className="xl:text-2xl md:text-xl  flex-nowrap lg:max-w-[45%]  max-w-[95%]">
 						Our professional team will assist you in making milk recording as
 						hassle-free as possible through the use of our new Electronic Milk
 						Meters.
 					</div>
-					<div className="flex flex-col items-center gap-8 mt-2 font-semibold lg:flex-row">
+					<div className="flex flex-col items-center gap-8 mt-2 font-semibold lg:text-justify lg:flex-row">
 						<div
 							onClick={() => {
 								setContactModal(true);

@@ -4,8 +4,8 @@ import ContactForm from "./ContactForm/ContactForm";
 
 const Contact = () => {
 	return (
-		<div className="flex justify-center w-full px-0 mb-10 md:px-20 ">
-			<div className="flex flex-col-reverse justify-between w-full max-w-6xl gap-10 p-5 lg:flex-row 2xl:max-w-7xl lg:rounded-[48px] bg-neutral-100 ">
+		<div className="flex mt-20 justify-center w-full px-0 md:px-20 mb-10 xl:px-[150px] ">
+			<div className="flex flex-col-reverse justify-between w-full max-w-6xl gap-10 p-5 lg:flex-row 2xl:max-w-7xl md:rounded-[48px] bg-neutral-100 ">
 				<div className="flex justify-center overflow-hidden lg:w-1/2 rounded-3xl lg:justify-start ">
 					<Image
 						src="/Contact/contact1.png"

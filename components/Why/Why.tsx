@@ -36,21 +36,21 @@ const Why = () => {
 	return (
 		<div
 			id="Milk Recording"
-			className="flex justify-center w-full gap-12 px-4 py-6 mt-4 overflow-hidden md:mt-20 md:px-20 "
+			className="flex justify-center w-full gap-12 px-4 py-6 mt-4 overflow-hidden lg:mb-16 md:mt-14 md:px-10 lg:px-20 "
 		>
 			<div className="flex flex-col items-center justify-center w-full xl:max-w-6xl gap-y-12 2xl:max-w-7xl">
 				<div className="w-full text-2xl text-left lg:text-4xl">
 					<span className="font-bold ">Why</span> Milk Recording
 				</div>
-				<div className="flex flex-col w-full gap-y-8 md:gap-y-20">
-					<div className="flex flex-col md:flex-row gap-x-6 lg:gap-x-16 gap-y-8">
+				<div className="flex flex-col w-full gap-x-4 lg:gap-x-16 md:flex-row gap-y-8 md:gap-y-28">
+					<div className="flex flex-col gap-x-8 lg:gap-x-16 gap-y-8 md:gap-y-16">
 						{reasons.map((reason: any) => {
 							return (
 								<div
 									key={reason.id}
-									className="flex items-start justify-center md:max-w-[48%] gap-y-4 lg:items-center md:gap-x-6 gap-x-4"
+									className="flex items-start justify-center gap-y-4 lg:items-center md:gap-x-6 gap-x-4"
 								>
-									<div className="relative flex items-center justify-center h-16 w-[70px] lg:h-24 lg:w-28 ">
+									<div className="relative flex items-center justify-center h-16 w-[70px] lg:h-28 lg:w-28 ">
 										<div className=" overflow-hidden p-0.5 border-2 border-blue-400 rounded-full realtive flex items-center lg:w-[105px] lg:h-[105px]">
 											<Image
 												src={`/why/${reason.img}.jpg`}
@@ -62,10 +62,10 @@ const Why = () => {
 										</div>
 									</div>
 									<div className="flex max-w-[70%] flex-col gap-2">
-										<div className="flex xl:w-[410px] justify-start lg:text-xl font-bold">
+										<div className="flex xl:w-[410px] justify-start lg:text-xl xl:whitespace-nowrap font-bold">
 											{reason.title}
 										</div>
-										<p className="text-left w-full md:w-[280px] text-sm xl:text-base flex justify-start xl:w-[380px] lg:h-[72px]">
+										<p className="text-left w-full md:w-[260px] text-sm xl:text-base flex justify-start xl:w-[400px] lg:h-[72px]">
 											{reason.body}
 										</p>
 									</div>
@@ -73,12 +73,12 @@ const Why = () => {
 							);
 						})}
 					</div>
-					<div className="flex flex-col md:flex-row gap-x-6 lg:gap-x-16 gap-y-8">
+					<div className="flex flex-col gap-x-6 lg:gap-x-16 gap-y-8 md:gap-y-16">
 						{reasons2.map((reason: any) => {
 							return (
 								<div
 									key={reason.id}
-									className="flex items-start justify-center md:max-w-[48%] gap-y-4 lg:items-center gap-x-4 md:gap-x-6"
+									className="flex items-start justify-center gap-y-4 lg:items-center gap-x-4 md:gap-x-6"
 								>
 									<div className="relative flex items-center justify-center h-16 w-[70px] lg:h-24 lg:w-28 ">
 										<div className=" overflow-hidden p-0.5 border-2 border-blue-400 rounded-full realtive flex items-center lg:w-[105px] lg:h-[105px]">
@@ -92,10 +92,10 @@ const Why = () => {
 										</div>
 									</div>
 									<div className="flex max-w-[70%] flex-col gap-2">
-										<div className="flex xl:w-[410px] justify-start lg:text-xl font-bold">
+										<div className="flex xl:w-[410px] justify-start lg:text-xl xl:whitespace-nowrap font-bold">
 											{reason.title}
 										</div>
-										<p className="text-left md:w-[280px] text-sm xl:text-base flex justify-start xl:w-[380px] lg:h-[72px]">
+										<p className="text-left md:w-[260px] text-sm xl:text-base flex justify-start xl:w-[400px] lg:h-[72px]">
 											{reason.body}
 										</p>
 									</div>

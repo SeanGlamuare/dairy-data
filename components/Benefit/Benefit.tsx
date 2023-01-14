@@ -5,7 +5,7 @@ import { TiTick } from "react-icons/ti";
 const benefits = [
 	{
 		id: 0,
-		benefit: "Identify your poor performing cows",
+		benefit: "Accurately Identify your poor performing cows",
 		detail:
 			"The production summary report outltines the key milking performance figures for reach individual cow. Your most profitable and least profitable cows are easily identified by the Margin Per Day breakdown.",
 	},
@@ -41,18 +41,18 @@ const Benefit = () => {
 	return (
 		<div
 			id="Benefits"
-			className="flex justify-center w-full h-full px-6 mt-12 mb-10 md:px-20 md:mt-28"
+			className="flex justify-center w-full h-full px-6 mb-10 md:px-20 md:mt-28"
 		>
 			<div className="flex flex-col justify-around w-full max-w-6xl gap-2 gap-x-12 gap-y-0 lg:flex-row 2xl:max-w-7xl">
 				<div className="mb-8 text-2xl text-left lg:hidden">
 					<span className="w-full font-bold">Benefits of</span> Milk Recording
 				</div>
-				<div className="justify-center hidden w-1/2 overflow-visible xl:flex lg:justify-start rounded-3xl">
+				<div className="justify-center hidden w-full overflow-visible xl:flex lg:justify-start rounded-3xl">
 					<Image
 						alt={"benefit"}
 						src="/benefit/benefit1.png"
-						width={480}
-						height={500}
+						width={500}
+						height={520}
 						className={"rounded-3xl object-cover scale-x-95 xl:scale-100"}
 					/>
 				</div>
@@ -82,12 +82,12 @@ const Benefit = () => {
 												className={` ${
 													chosenBenefit === benefit.id &&
 													"bg-blue-500 text-white border-none"
-												} p-0.5 border rounded-full w-6 flex items-center justify-center h-6 border-neutral-500`}
+												} p-0.5 border rounded-full w-6 flex items-center justify-center h-6 border-black`}
 											>
 												<TiTick />
 											</div>
 										</div>
-										<div className={`flex flex-col gap-2`}>
+										<div className={`flex gap-2 flex-col gap-2`}>
 											<div
 												className={`font-bold ${
 													chosenBenefit === benefit.id && "text-blue-500 "
@@ -102,7 +102,7 @@ const Benefit = () => {
 										onClick={() => setChosenBenefit(benefit.id)}
 										key={benefit.id}
 										className={`${
-											chosenBenefit === benefit.id ? "h-36" : "h-20"
+											chosenBenefit === benefit.id ? "h-44" : "h-20"
 										}   transition-all hidden lg:flex pt-6 overflow-hidden duration-500 cursor-pointer  justify-left gap-x-6 w-full`}
 									>
 										<div>
@@ -110,12 +110,12 @@ const Benefit = () => {
 												className={` ${
 													chosenBenefit === benefit.id &&
 													"bg-blue-500 text-white border-none"
-												} p-0.5 border rounded-full w-6 flex items-center justify-center h-6 border-neutral-500`}
+												} p-0.5 border rounded-full w-6 flex items-center justify-center h-6 border-black`}
 											>
 												<TiTick />
 											</div>
 										</div>
-										<div className={`flex flex-col g border-b`}>
+										<div className={`flex gap-2 flex-col g border-b`}>
 											<div
 												className={`font-bold xl:whitespace-nowrap text-lg xl:text-xl ${
 													chosenBenefit === benefit.id && "text-blue-500 "

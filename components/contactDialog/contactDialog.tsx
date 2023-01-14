@@ -10,8 +10,8 @@ const ContactDialog = () => {
 					<div className="w-40 lg:w-max">
 						<Image
 							src="/contactDialog/cd1.png"
-							width={80}
-							height={80}
+							width={90}
+							height={90}
 							className="object-cover rounded-full min-w-[100px]"
 						/>
 					</div>

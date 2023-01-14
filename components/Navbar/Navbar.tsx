@@ -15,8 +15,8 @@ const Navbar = () => {
 	const [showSideMenu, setShowSideMenu] = useState<Boolean>(false);
 
 	return (
-		<div className="flex justify-center w-screen py-8 overflow-hidden bg-white h-14 md:pl-4 xl:px-16 lg:pl-0 xl:h-32">
-			<div className="flex justify-between w-full max-w-6xl 2xl:max-w-7xl">
+		<div className="flex justify-center w-screen py-8 overflow-hidden bg-white h-14 md:h-20 md:pl-4 xl:px-16 lg:pl-0 lg:h-24 xl:h-32">
+			<div className="flex justify-between w-full max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
 				<div className="flex items-center justify-start w-full gap-2 pl-4 title">
 					<div className="items-center hidden w-max h-max xl:flex">
 						<Image
@@ -36,7 +36,7 @@ const Navbar = () => {
 							className="hidden lg:block"
 						/>
 					</div>
-					<div className="text-lg md:text-2xl font-sans leading-3 uppercase xl:text-[28px]">
+					<div className="text-lg tracking-widest md:text-2xl font-semibold leading-3 uppercase xl:text-[28px]">
 						Dairy <span className="text-blue-500">Data</span>
 					</div>
 				</div>
