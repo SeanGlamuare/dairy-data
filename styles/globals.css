@@ -15,7 +15,6 @@ html {
 
 body {
 	overflow-x: hidden;
-	letter-spacing: 0.02em;
 }
 
 .contactSuccess {
@@ -41,7 +40,7 @@ body {
 }
 
 .gradient-btn {
-	background: linear-gradient(215.72deg, #53646f 0%, #000000 98.45%);
+	background: linear-gradient(185.72deg, #53646f 0%, #000000 98.45%);
 }
 .gradient-ftr {
 	background: linear-gradient(256.46deg, #4d5b66 1.16%, #080a0b 94.63%);

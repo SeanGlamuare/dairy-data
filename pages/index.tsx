@@ -19,7 +19,9 @@ const Home: NextPage = () => {
 	return (
 		<>
 			<div
-				className={`flex flex-col gap-1 ${contactModal && "hidden md:block"} `}
+				className={`flex flex-col tracking-[0.02em] ${
+					contactModal && "hidden md:block"
+				} `}
 			>
 				<Navbar />
 				<Hero />

@@ -22,7 +22,7 @@ const StyledDiv = styled.div`
 
 const StyledInput = styled.input`
 	font-size: 14px;
-	padding: 10px;
+	padding: 10px 12px;
 	border-radius: 4px;
 	outline: none;
 	border: 1px solid rgba(0, 0, 0, 0.1);
@@ -189,10 +189,10 @@ const ContactForm = () => {
 						I agree that the data I submit will be collected and stored
 					</label>
 				</div>{" "}
-				<div className="w-40">
+				<div className="w-40 h-11">
 					<button
 						disabled={!!loading}
-						className="p-2 px-6 w-36 disabled:from-neutral-500 disabled:to-neutral-500 text-white rounded-full disabled:cursor-not-allowed disabled:shadow-none cursor-pointer bg-gradient-to-b from-neutral-600 flex justify-center to-neutral-900 hover:shadow-lg h-12 items-center hover:shadow-black/25 active:scale-[.98]"
+						className="p-2 px-6 w-full disabled:from-neutral-500 disabled:to-neutral-500 text-white rounded-full disabled:cursor-not-allowed disabled:shadow-none cursor-pointer gradient-btn  flex justify-center  hover:shadow-lg h-full items-center hover:shadow-black/25 active:scale-[.98]"
 					>
 						{!loading ? (
 							"Submit"

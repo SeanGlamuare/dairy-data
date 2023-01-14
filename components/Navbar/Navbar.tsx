@@ -15,12 +15,12 @@ const Navbar = () => {
 	const [showSideMenu, setShowSideMenu] = useState<Boolean>(false);
 
 	return (
-		<div className="flex justify-center w-screen h-20 py-8 overflow-hidden bg-white md:pl-4 xl:px-16 lg:pl-0 xl:h-32">
-			<div className="flex justify-between w-full max-w-6xl 2xl:max-w-7xl">
+		<div className="flex justify-center w-screen py-8 overflow-hidden bg-white h-14 md:h-20 md:pl-4 xl:px-16 lg:pl-0 lg:h-24 xl:h-32">
+			<nav className="flex justify-between w-full max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
 				<div className="flex items-center justify-start w-full gap-2 pl-4 title">
 					<div className="items-center hidden w-max h-max xl:flex">
 						<Image
-							alt={"logo"}
+							alt={"dairy data logo"}
 							src="/logo.png"
 							width={80.16}
 							height={83}
@@ -29,16 +29,16 @@ const Navbar = () => {
 					</div>
 					<div className="flex items-center w-max h-max xl:hidden">
 						<Image
-							alt={"logo"}
+							alt={"dairy data logo"}
 							src="/logo.png"
 							width={40.16}
 							height={43}
 							className="hidden lg:block"
 						/>
 					</div>
-					<div className="text-lg md:text-2xl font-sans leading-3 uppercase xl:text-[28px]">
+					<h1 className="text-lg tracking-widest md:text-2xl font-semibold leading-3 uppercase xl:text-[28px]">
 						Dairy <span className="text-blue-500">Data</span>
-					</div>
+					</h1>
 				</div>
 				<div className="items-center hidden gap-5 pr-10 lg:flex">
 					{menu.map((tab: { name: string }) => {
@@ -89,7 +89,7 @@ const Navbar = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</nav>
 		</div>
 	);
 };
