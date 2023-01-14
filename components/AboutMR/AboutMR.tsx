@@ -8,10 +8,10 @@ const AboutMR = () => {
 			className="flex justify-center w-full px-4 mt-10 mb-12 md:mb-20 md:mt-24 md:px-20 "
 		>
 			<div className="flex flex-col items-center w-full max-w-6xl gap-2 gap-y-10 lg:justify-between gap-x-6 lg:flex-row 2xl:max-w-7xl">
-				<div className="flex flex-col md:gap-14 lg:w-[50%] gap-4 justify-start h-max">
-					<div className="text-2xl lg:text-[40px] text-left">
+				<article className="flex flex-col md:gap-14 lg:w-[50%] gap-4 justify-start h-max">
+					<h1 className="text-2xl lg:text-[40px] text-left">
 						<span className="font-bold">About</span> Milk Recording
-					</div>
+					</h1>
 					<div className="flex flex-col gap-4 text-sm text-black lg:text-base">
 						<p>
 							Research has shown that farmers who milk record see clear benefits
@@ -37,7 +37,7 @@ const AboutMR = () => {
 							increasing gross margins on your farm.
 						</p>
 					</div>
-				</div>
+				</article>
 				<div className="relative flex justify-end lg:w-1/2 rounded-3xl">
 					<div className="relative flex justify-center">
 						<Image

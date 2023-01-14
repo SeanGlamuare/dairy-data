@@ -49,7 +49,7 @@ const Benefit = () => {
 				</div>
 				<div className="justify-center hidden w-full overflow-visible xl:flex lg:justify-start rounded-3xl">
 					<Image
-						alt={"benefit"}
+						alt={"benefits of using dairy data"}
 						src="/benefit/benefit1.png"
 						width={500}
 						height={520}
@@ -58,17 +58,17 @@ const Benefit = () => {
 				</div>
 				<div className=" w-[100%] justify-center my-auto overflow-visible xl:hidden flex lg:justify-start rounded-3xl">
 					<Image
-						alt={"benefit"}
+						alt={"benefits of using dairy data"}
 						src="/benefit/benefit1.png"
 						width={300}
 						height={350}
 						className={"rounded-3xl object-cover scale-x-95 xl:scale-100"}
 					/>
 				</div>
-				<div className="flex flex-col gap-8 xl:w-[60%]">
-					<div className="text-[40px] text-center hidden lg:block lg:text-left">
+				<article className="flex flex-col gap-8 xl:w-[60%]">
+					<h1 className="text-[40px] text-center hidden lg:block lg:text-left">
 						<span className="w-full font-bold">Benefits of</span> Milk Recording
-					</div>
+					</h1>
 					<div className="flex flex-col gap-1">
 						{benefits.map((benefit: any) => {
 							return (
@@ -87,7 +87,7 @@ const Benefit = () => {
 												<TiTick />
 											</div>
 										</div>
-										<div className={`flex gap-2 flex-col gap-2`}>
+										<div className={`flex gap-2 flex-col `}>
 											<div
 												className={`font-bold ${
 													chosenBenefit === benefit.id && "text-blue-500 "
@@ -134,7 +134,7 @@ const Benefit = () => {
 							);
 						})}
 					</div>
-				</div>
+				</article>
 			</div>
 		</div>
 	);

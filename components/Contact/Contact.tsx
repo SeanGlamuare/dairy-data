@@ -11,11 +11,11 @@ const Contact = () => {
 						src="/Contact/contact1.png"
 						width={500}
 						height={700}
-						alt="contact"
+						alt="dairy data contact us"
 						className="object-cover rounded-[48px]"
 					/>
 				</div>
-				<div className="flex flex-col gap-4 lg:w-1/2">
+				<article className="flex flex-col gap-4 lg:w-1/2">
 					<div className="text-2xl font-bold md:text-3xl">Contact Us</div>
 					<p className="hidden lg:block">
 						Register your interest in Milk Recording with us here today.
@@ -28,7 +28,7 @@ const Contact = () => {
 					<div className="">
 						<ContactForm />
 					</div>
-				</div>
+				</article>
 			</div>
 		</div>
 	);

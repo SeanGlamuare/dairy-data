@@ -39,10 +39,10 @@ const Why = () => {
 			className="flex justify-center w-full gap-12 px-4 py-6 mt-4 overflow-hidden lg:mb-16 md:mt-14 md:px-10 lg:px-20 "
 		>
 			<div className="flex flex-col items-center justify-center w-full xl:max-w-6xl gap-y-12 2xl:max-w-7xl">
-				<div className="w-full text-2xl text-left lg:text-4xl">
+				<h1 className="w-full text-2xl text-left lg:text-4xl">
 					<span className="font-bold ">Why</span> Milk Recording
-				</div>
-				<div className="flex flex-col w-full gap-x-4 lg:gap-x-16 md:flex-row gap-y-8 md:gap-y-28">
+				</h1>
+				<article className="flex flex-col w-full gap-x-4 lg:gap-x-16 md:flex-row gap-y-8 md:gap-y-28">
 					<div className="flex flex-col gap-x-8 lg:gap-x-16 gap-y-8 md:gap-y-16">
 						{reasons.map((reason: any) => {
 							return (
@@ -103,7 +103,7 @@ const Why = () => {
 							);
 						})}
 					</div>
-				</div>
+				</article>
 			</div>
 		</div>
 	);
