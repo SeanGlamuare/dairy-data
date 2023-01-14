@@ -33,7 +33,7 @@ const Hero = () => {
 					<div className="text-[40px] md:text-6xl xl:text-[88px] text-left font-bold text-white max-w-full  lg:max-w-[60%]">
 						The Future of Farming is Now
 					</div>
-					<div className="xl:text-2xl md:text-xl  flex-nowrap text-justify lg:max-w-[50%] max-w-[90%]">
+					<div className="xl:text-2xl md:text-xl  flex-nowrap lg:max-w-[50%] max-w-[95%]">
 						Our professional team will assist you in making milk recording as
 						hassle-free as possible through the use of our new Electronic Milk
 						Meters.
