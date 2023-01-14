@@ -35,7 +35,7 @@ const Footer = () => {
 	return (
 		<div className="flex justify-center w-full px-2 py-1.5 mt-16 overflow-hidden lg:px-20 gradient-ftr">
 			<div className="flex flex-col justify-center w-full max-w-6xl gap-6 py-2 h-76 lg:h-28 text-neutral-400 2xl:max-w-7xl ">
-				<div className="flex flex-col items-center justify-center py-4 lg:justify-between gap-y-6 2xl:gap-x-20 gap-x-20 lg:flex-row">
+				<div className="flex flex-col items-center justify-center py-4 lg:justify-between gap-y-6 2xl:gap-x-52 gap-x-20 lg:flex-row">
 					<div className="flex flex-col w-full gap-2 lg:w-max min-w-fit">
 						<div className="flex items-center justify-start w-full gap-2 text-2xl lg:w-max text-neutral-200">
 							<Image src="/logo.png" width={55} height={55} alt="logo" />
@@ -51,15 +51,15 @@ const Footer = () => {
 							<div className="flex gap-6 jsutify-between">
 								<div className="flex items-center gap-2 whitespace-nowrap">
 									<BsTelephone />
-									<Link href={`tel:${phone}`}>
-										<A>{phone}</A>
+									<Link href={`tel:${phone}`} passHref>
+										<A target="_blank">{phone}</A>
 									</Link>
 								</div>
 
 								<div className="flex items-center gap-2">
 									<IoMailOutline />
 									<Link href={`mailto:${mail}`} passHref>
-										<A>{mail}</A>
+										<A target="_blank">{mail}</A>
 									</Link>
 								</div>
 							</div>
@@ -72,19 +72,19 @@ const Footer = () => {
 								<div className="flex items-center gap-2">
 									<BsInstagram />
 									<Link href={`https://instagram.com/${instagram}`} passHref>
-										<A>@{instagram}</A>
+										<A target="_blank">@{instagram}</A>
 									</Link>
 								</div>
 								<div className="flex items-center gap-2">
 									<FaFacebookF />
-									<Link href={`https://facebook.com/${facebook}`}>
-										<A>Dairy Data</A>
+									<Link href={`https://facebook.com/${facebook}`} passHref>
+										<A target="_blank">Dairy Data</A>
 									</Link>
 								</div>
 								<div className="flex items-center gap-2">
 									<BsTwitter />
 									<Link href={`https://twitter.com/${twitter}`} passHref>
-										<A>@{twitter}</A>
+										<A target="_blank">@{twitter}</A>
 									</Link>
 								</div>
 							</div>
