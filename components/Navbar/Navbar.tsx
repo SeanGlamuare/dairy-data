@@ -15,22 +15,37 @@ const Navbar = () => {
 	const [showSideMenu, setShowSideMenu] = useState<Boolean>(false);
 
 	return (
-		<div className="flex justify-center w-screen h-24 py-8 overflow-hidden bg-white xl:px-16 xl:h-32">
-			<div className="flex justify-between w-full max-w-5xl 2xl:max-w-7xl">
-				<div className="flex items-center justify-start w-full gap-2 title">
-					<div>
-						<Image alt={"logo"} src="/dairy_logo.png" width={75} height={75} />
+		<div className="flex justify-center w-screen h-20 py-8 overflow-hidden bg-white md:pl-4 xl:px-16 lg:pl-0 xl:h-32">
+			<div className="flex justify-between w-full max-w-6xl 2xl:max-w-7xl">
+				<div className="flex items-center justify-start w-full gap-2 pl-4 title">
+					<div className="items-center hidden w-max h-max xl:flex">
+						<Image
+							alt={"logo"}
+							src="/logo.png"
+							width={80.16}
+							height={83}
+							className="hidden lg:block"
+						/>
 					</div>
-					<div className="font-serif text-xl uppercase lg:text-3xl">
+					<div className="flex items-center w-max h-max xl:hidden">
+						<Image
+							alt={"logo"}
+							src="/logo.png"
+							width={40.16}
+							height={43}
+							className="hidden lg:block"
+						/>
+					</div>
+					<div className="text-lg md:text-2xl font-sans leading-3 uppercase xl:text-[28px]">
 						Dairy <span className="text-blue-500">Data</span>
 					</div>
 				</div>
-				<div className="items-center hidden gap-5 pr-10 text-sm lg:flex">
+				<div className="items-center hidden gap-5 pr-10 lg:flex">
 					{menu.map((tab: { name: string }) => {
 						return (
 							<div
 								key={tab.name}
-								className="flex justify-center font-semibold cursor-pointer w-28 hover:underline hover:underline-offset-2"
+								className="flex duration-[0] justify-center w-max min-w-[110px] font-medium whitespace-nowrap text-black/80 hover:text-black transition-all ease-out cursor-pointer xl:text-base text-sm hover:font-[600] "
 							>
 								<a href={`#${tab.name}`}>{tab.name}</a>
 							</div>
@@ -40,17 +55,17 @@ const Navbar = () => {
 				</div>
 				<div
 					onClick={() => setShowSideMenu(true)}
-					className="flex items-center pr-10 text-2xl lg:hidden"
+					className="flex items-center pr-4 text-2xl md:pr-10 lg:hidden"
 				>
 					<GiHamburgerMenu />
 				</div>
 
 				<div
 					className={` ${
-						showSideMenu ? "left-1/4  " : " left-full "
-					} fixed  box-border w-[75vw] bg-white top-0 overflow-hidden transition-all duration-500 z-50 lg:hidden shadow-lg shadow-black/40 h-screen`}
+						showSideMenu ? "left-0  " : " left-full "
+					} fixed  box-border w-[100vw] bg-white top-0 overflow-hidden transition-all duration-500 z-50 lg:hidden shadow-lg shadow-black/40 h-screen`}
 				>
-					<div className="flex flex-col w-full gap-16 px-8 py-6">
+					<div className="flex flex-col w-full gap-16 px-4 py-6">
 						<div className="flex justify-end w-full">
 							<ImCross onClick={() => setShowSideMenu(false)} />
 						</div>
@@ -62,14 +77,14 @@ const Navbar = () => {
 										onClick={() => {
 											setShowSideMenu(false);
 										}}
-										className="flex justify-center w-full p-2 text-lg font-semibold border-b cursor-pointer tex"
+										className="flex justify-start w-full p-2 text-2xl border-b cursor-pointer tex"
 									>
 										<a href={`#${tab.name}`}>{tab.name}</a>
 									</div>
 								);
 							})}
-							<div className="flex justify-center w-full">
-								<Button />
+							<div className="flex justify-center w-full text-sm">
+								<Button full={true} />
 							</div>
 						</div>
 					</div>

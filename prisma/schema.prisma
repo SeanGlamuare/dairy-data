@@ -12,12 +12,12 @@ datasource db {
 
 model Contact {
   id              String  @id @default(uuid())
-  Name            String
-  Email           String
-  Phone           String
-  EirCode         String?
-  NumOfCows       String?
-  ParlourSizeMake String?
-  Supplier        String?
-  Message         String? @db.Text
+  name            String
+  email           String
+  phone           String
+  eirCode         String?
+  numOfCows       String?
+  parlourSizeMake String?
+  supplier        String?
+  message         String? @db.Text
 }

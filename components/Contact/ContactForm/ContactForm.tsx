@@ -10,7 +10,7 @@ import Spinner from "../../Spinner/Spinner";
 
 const StyledLabel = styled.label`
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 16px;
 `;
 
 const StyledDiv = styled.div`
@@ -22,14 +22,14 @@ const StyledDiv = styled.div`
 
 const StyledInput = styled.input`
 	font-size: 14px;
-	padding: 0.5rem;
+	padding: 10px;
 	border-radius: 4px;
 	outline: none;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	::placeholder {
 		color: rgba(0, 0, 0, 0.2);
 		font-weight: bold;
-		font-size: 12px;
+		font-size: 14px;
 	}
 `;
 
@@ -77,7 +77,7 @@ const ContactForm = () => {
 						className={`${errors.name && "text-red-500 "}`}
 						htmlFor="name"
 					>
-						Name *
+						Name <span className="text-red-500">*</span>
 					</StyledLabel>
 					<StyledInput
 						className=""
@@ -94,9 +94,10 @@ const ContactForm = () => {
 							htmlFor="email"
 							className={`${errors.email && "text-red-500 "}`}
 						>
-							Email *
+							Email <span className="text-red-500">*</span>
 						</StyledLabel>
 						<StyledInput
+							type="email"
 							id="email"
 							{...register("email", {
 								required: "This field is required",
@@ -109,10 +110,11 @@ const ContactForm = () => {
 							htmlFor="phone"
 							className={`${errors.phone && "text-red-500 "}`}
 						>
-							Phone Number *
+							Phone Number <span className="text-red-500">*</span>
 						</StyledLabel>
 						<StyledInput
 							id="phone"
+							type="number"
 							{...register("phone", {
 								required: "This field is required",
 							})}
@@ -122,7 +124,7 @@ const ContactForm = () => {
 				</div>
 				<div className="flex flex-col w-full gap-6 lg:flex-row">
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="eircode" className="">
+						<StyledLabel htmlFor="eirCode" className="">
 							Eircode{" "}
 						</StyledLabel>
 						<StyledInput
@@ -132,7 +134,7 @@ const ContactForm = () => {
 						/>
 					</StyledDiv>
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="noc" className="">
+						<StyledLabel htmlFor="numOfCows" className="">
 							Number of Cows
 						</StyledLabel>
 						<StyledInput
@@ -144,7 +146,7 @@ const ContactForm = () => {
 				</div>
 				<div className="flex flex-col w-full gap-6 lg:flex-row">
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="parlour" className="">
+						<StyledLabel htmlFor="parlourSizeMake" className="">
 							Parlour Size and Make
 						</StyledLabel>
 						<StyledInput
@@ -169,16 +171,16 @@ const ContactForm = () => {
 					<textarea
 						id="message"
 						{...register("message")}
-						className="h-40 p-2 border border-black/10 text-sm rounded outline-none max-h-24 min-h-[6rem] placeholder:text-xs placeholder:font-bold placeholder:text-black/20"
+						className="h-40 p-2 border border-black/10 text-sm rounded outline-none max-h-24 min-h-[6rem] placeholder:text-sm placeholder:font-bold placeholder:text-black/20"
 						placeholder={"Enter your message"}
 					/>
 				</StyledDiv>
-				<div className="flex gap-2 text-sm text-neutral-400">
+				<div className="flex items-start gap-2 text-sm text-neutral-400">
 					<input
 						id="Agree"
 						{...register("agree", { required: "must be checked" })}
 						type="checkbox"
-						className="cursor-pointer border-neutral-200 ring-black/20"
+						className="mt-1 cursor-pointer border-neutral-200 ring-black/20"
 					/>
 					<label
 						htmlFor="Agree"

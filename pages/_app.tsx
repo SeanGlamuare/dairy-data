@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 					locale: "en_IE",
 					url: "https://www.dairydata.ie/",
 					siteName: "DairyData",
+
 					images: [
 						{
 							url: "https://res.cloudinary.com/dqdktlbxw/image/upload/v1673587541/DairyData/front_wafm0h.png",

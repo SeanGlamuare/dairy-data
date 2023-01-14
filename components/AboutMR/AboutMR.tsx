@@ -5,14 +5,14 @@ const AboutMR = () => {
 	return (
 		<div
 			id="About Us"
-			className="flex justify-center w-full px-8 mt-24 mb-20 lg:px-20 text-neutral-800"
+			className="flex justify-center w-full px-6 mt-10 mb-20 md:mt-24 md:px-20 "
 		>
-			<div className="flex flex-col items-center w-full max-w-5xl gap-2 gap-y-10 lg:justify-between gap-x-6 lg:flex-row 2xl:max-w-7xl">
+			<div className="flex flex-col items-center w-full max-w-6xl gap-2 gap-y-10 lg:justify-between gap-x-6 lg:flex-row 2xl:max-w-7xl">
 				<div className="flex flex-col lg:w-[50%] gap-10 justify-start h-max">
-					<div className="text-4xl text-center lg:text-left">
+					<div className="text-2xl lg:text-[40px] text-left">
 						<span className="font-bold">About</span> Milk Recording
 					</div>
-					<div className="flex flex-col gap-4 text-sm font-semibold text-neutral-600">
+					<div className="flex flex-col gap-4 text-sm text-black lg:text-base">
 						<p>
 							Research has shown that farmers who milk record see clear benefits
 							in animal health and economic performance
@@ -38,13 +38,16 @@ const AboutMR = () => {
 						</p>
 					</div>
 				</div>
-				<div className="flex justify-end overflow-hidden h-max lg:w-1/2 rounded-3xl">
-					<Image
-						src="/aboutmr/aboutmr1.png"
-						width={400}
-						height={450}
-						className="rounded-3xl"
-					/>
+				<div className="relative flex justify-end lg:w-1/2 rounded-3xl">
+					<div className="relative flex justify-center">
+						<Image
+							src="/aboutmr/aboutmr1.png"
+							width={400}
+							height={450}
+							className=" rounded-[48px] z-10"
+						/>
+						<div className=" hidden xl:flex justify-center absolute left-10 top-10 bg-neutral-100 rounded-[48px] w-[400px] h-[440px] "></div>
+					</div>
 				</div>
 			</div>
 		</div>
