@@ -15,7 +15,7 @@ const Navbar = () => {
 	const [showSideMenu, setShowSideMenu] = useState<Boolean>(false);
 
 	return (
-		<div className="flex justify-center w-screen h-20 py-8 overflow-hidden bg-white md:pl-4 xl:px-16 lg:pl-0 xl:h-32">
+		<div className="flex justify-center w-screen py-8 overflow-hidden bg-white h-14 md:pl-4 xl:px-16 lg:pl-0 xl:h-32">
 			<div className="flex justify-between w-full max-w-6xl 2xl:max-w-7xl">
 				<div className="flex items-center justify-start w-full gap-2 pl-4 title">
 					<div className="items-center hidden w-max h-max xl:flex">

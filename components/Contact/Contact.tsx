@@ -16,12 +16,12 @@ const Contact = () => {
 					/>
 				</div>
 				<div className="flex flex-col gap-4 lg:w-1/2">
-					<div className="text-3xl font-bold">Contact Us</div>
+					<div className="text-2xl font-bold md:text-3xl">Contact Us</div>
 					<p className="hidden lg:block">
 						Register your interest in Milk Recording with us here today.
 						<p>Our team will be in touch as soon as possible</p>
 					</p>
-					<p className=" lg:hidden">
+					<p className="pr-4 text-sm lg:hidden">
 						Register your interest in Milk Recording with us here today.
 						<> Our team will be in touch as soon as possible.</>
 					</p>

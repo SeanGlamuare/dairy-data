@@ -36,7 +36,7 @@ const Why = () => {
 	return (
 		<div
 			id="Milk Recording"
-			className="flex justify-center w-full gap-12 px-4 py-6 mt-20 overflow-hidden md:px-20 "
+			className="flex justify-center w-full gap-12 px-4 py-6 mt-4 overflow-hidden md:mt-20 md:px-20 "
 		>
 			<div className="flex flex-col items-center justify-center w-full xl:max-w-6xl gap-y-12 2xl:max-w-7xl">
 				<div className="w-full text-2xl text-left lg:text-4xl">

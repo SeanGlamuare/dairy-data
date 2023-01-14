@@ -33,7 +33,7 @@ const Hero = () => {
 					<div className="text-[40px] md:text-6xl xl:text-[88px] text-left font-bold text-white max-w-full  lg:max-w-[60%]">
 						The Future of Farming is Now
 					</div>
-					<div className="xl:text-2xl md:text-xl  flex-nowrap text-justify lg:max-w-[50%] max-w-[80%]">
+					<div className="xl:text-2xl md:text-xl  flex-nowrap text-justify lg:max-w-[50%] max-w-[90%]">
 						Our professional team will assist you in making milk recording as
 						hassle-free as possible through the use of our new Electronic Milk
 						Meters.
@@ -43,7 +43,7 @@ const Hero = () => {
 							onClick={() => {
 								setContactModal(true);
 							}}
-							className="p-2 px-8 font-medium text-black transition-all duration-100 bg-white rounded-full items-center cursor-pointer active:shadow-none active:scale-[.98] lg:w-40 h-11 flex justify-center hover:shadow-lg hover:shadow-black/25 w-full"
+							className="p-2 px-8 font-semibold text-black transition-all duration-100 bg-white rounded-full items-center cursor-pointer active:shadow-none active:scale-[.98] lg:w-40 h-11 flex justify-center hover:shadow-lg hover:shadow-black/25 w-full"
 						>
 							Contact Us
 						</div>

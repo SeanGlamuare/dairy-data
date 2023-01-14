@@ -43,8 +43,8 @@ const Benefit = () => {
 			id="Benefits"
 			className="flex justify-center w-full h-full px-6 mt-12 mb-10 md:px-20 md:mt-28"
 		>
-			<div className="flex flex-col justify-around w-full max-w-6xl gap-2 gap-x-12 gap-y-10 lg:flex-row 2xl:max-w-7xl">
-				<div className="text-2xl text-left lg:hidden">
+			<div className="flex flex-col justify-around w-full max-w-6xl gap-2 gap-x-12 gap-y-0 lg:flex-row 2xl:max-w-7xl">
+				<div className="mb-8 text-2xl text-left lg:hidden">
 					<span className="w-full font-bold">Benefits of</span> Milk Recording
 				</div>
 				<div className="justify-center hidden w-1/2 overflow-visible xl:flex lg:justify-start rounded-3xl">
@@ -56,12 +56,12 @@ const Benefit = () => {
 						className={"rounded-3xl object-cover scale-x-95 xl:scale-100"}
 					/>
 				</div>
-				<div className=" w-[100%] justify-center my-auto overflow-visible xl:hidden lg:justify-start rounded-3xl">
+				<div className=" w-[100%] justify-center my-auto overflow-visible xl:hidden flex lg:justify-start rounded-3xl">
 					<Image
 						alt={"benefit"}
 						src="/benefit/benefit1.png"
-						width={420}
-						height={500}
+						width={300}
+						height={350}
 						className={"rounded-3xl object-cover scale-x-95 xl:scale-100"}
 					/>
 				</div>
@@ -75,7 +75,7 @@ const Benefit = () => {
 								<>
 									<div
 										onClick={() => setChosenBenefit(benefit.id)}
-										className={` flex gap-4 pt-6 pb-6 border-b lg:hidden border-black/10`}
+										className={` flex gap-4 pt-4 pb-4 border-b lg:hidden border-black/10`}
 									>
 										<div>
 											<div

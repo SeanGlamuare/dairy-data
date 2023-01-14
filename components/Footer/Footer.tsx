@@ -38,20 +38,22 @@ const Footer = () => {
 				<div className="flex flex-col items-center justify-center py-4 lg:justify-between gap-y-6 2xl:gap-x-20 gap-x-24 lg:flex-row">
 					<div className="flex flex-col w-full gap-2 lg:w-max min-w-fit">
 						<div className="flex items-center justify-start w-full gap-2 text-2xl lg:w-max text-neutral-200">
-							<Image src="/logo.png" width={60} height={60} alt="logo" />
+							<Image src="/logo.png" width={50} height={50} alt="logo" />
 							<div className="text-xl uppercase whitespace-nowrap xl:text-2xl">
 								Dairy <span className="text-blue-500">Data</span>
 							</div>
 						</div>
 					</div>
 
-					<div className="flex flex-col flex-wrap items-start justify-between w-full px-4 text-sm lg:flex-nowrap xl:gap-x-6 gap-y-8 2xl:flex-row">
+					<div className="flex flex-col flex-wrap items-start justify-between w-full px-2 text-sm lg:flex-nowrap xl:gap-x-6 gap-y-8 2xl:flex-row">
 						<div className="flex flex-col items-start justify-start w-full gap-4 xl:flex-row 2xl:justify-start gap-x-6">
 							<div className="lg:hidden xl:block">Contact</div>
 							<div className="flex gap-6 jsutify-between">
 								<div className="flex items-center gap-2">
 									<BsTelephone />
-									<div>{phone}</div>
+									<Link href={`tel:${phone}`}>
+										<A>{phone}</A>
+									</Link>
 								</div>
 
 								<div className="flex items-center gap-2">
@@ -64,7 +66,7 @@ const Footer = () => {
 						</div>
 						<div className="flex flex-col flex-wrap items-start justify-center w-full gap-2 lg:flex-row gap-x-6 xl:justify-center gap-y-6 xl:flex-nowrap min-w-fit 2xl:justify-start ">
 							<div className="w-32 lg:hidden xl:block">Social Media</div>
-							<div className="flex flex-wrap w-full gap-y-4 xl:flex-nowrap gap-x-4 md:gap-x-10">
+							<div className="flex flex-wrap w-full gap-y-4 xl:flex-nowrap gap-x-8 md:gap-x-10">
 								<div className="flex items-center gap-2">
 									<BsInstagram />
 									<Link href={`https://instagram.com/${instagram}`} passHref>
