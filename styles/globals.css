@@ -2,12 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: "Avenir Next Variable";
+	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2729/AvenirNext_Variable.ttf")
+		format("truetype");
+}
+
 html {
 	scroll-behavior: smooth;
+	font-family: "Avenir Next Variable" sans-serif;
 }
 
 body {
 	overflow-x: hidden;
+	letter-spacing: 0.02em;
 }
 
 .contactSuccess {
@@ -21,5 +29,29 @@ body {
 
 	to {
 		bottom: 0;
+	}
+}
+
+.gradient-bg {
+	background: linear-gradient(
+		55.21deg,
+		#000000 -21.93%,
+		rgba(0, 0, 0, 0) 73.01%
+	);
+}
+
+.gradient-btn {
+	background: linear-gradient(215.72deg, #53646f 0%, #000000 98.45%);
+}
+.gradient-ftr {
+	background: linear-gradient(256.46deg, #4d5b66 1.16%, #080a0b 94.63%);
+}
+
+@media (max-width: 768px) {
+	.gradient-ftr {
+		background: linear-gradient(247.09deg, #4d5b66 1.59%, #080a0b 89.34%);
+	}
+	.gradient-bg {
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 135.74%);
 	}
 }

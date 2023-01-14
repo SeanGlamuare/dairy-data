@@ -1,12 +1,15 @@
 import React from "react";
 import { contactModalState } from "../../ContactModal/atom/atom";
 import { useRecoilState } from "recoil";
-const Button = () => {
+
+const Button = ({ full = false }: { full?: boolean }) => {
 	const [contactModal, setContactModal] = useRecoilState(contactModalState);
 	return (
 		<div
 			onClick={() => setContactModal(true)}
-			className="p-2 px-8 text-white rounded-full cursor-pointer bg-gradient-to-b from-neutral-600 w-36 flex justify-center to-neutral-900 hover:shadow-lg hover:shadow-black/25 active:scale-[.97]"
+			className={` h-11 ${
+				full ? "w-full" : "w-40"
+			} text-white rounded-full cursor-pointer gradient-btn items-center flex justify-center hover:shadow-lg hover:shadow-black/25 active:scale-[.98]`}
 		>
 			Contact Us
 		</div>

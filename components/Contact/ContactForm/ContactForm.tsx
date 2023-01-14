@@ -97,6 +97,7 @@ const ContactForm = () => {
 							Email *
 						</StyledLabel>
 						<StyledInput
+							type="email"
 							id="email"
 							{...register("email", {
 								required: "This field is required",
@@ -113,6 +114,7 @@ const ContactForm = () => {
 						</StyledLabel>
 						<StyledInput
 							id="phone"
+							type="number"
 							{...register("phone", {
 								required: "This field is required",
 							})}
@@ -122,7 +124,7 @@ const ContactForm = () => {
 				</div>
 				<div className="flex flex-col w-full gap-6 lg:flex-row">
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="eircode" className="">
+						<StyledLabel htmlFor="eirCode" className="">
 							Eircode{" "}
 						</StyledLabel>
 						<StyledInput
@@ -132,7 +134,7 @@ const ContactForm = () => {
 						/>
 					</StyledDiv>
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="noc" className="">
+						<StyledLabel htmlFor="numOfCows" className="">
 							Number of Cows
 						</StyledLabel>
 						<StyledInput
@@ -144,7 +146,7 @@ const ContactForm = () => {
 				</div>
 				<div className="flex flex-col w-full gap-6 lg:flex-row">
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="parlour" className="">
+						<StyledLabel htmlFor="parlourSizeMake" className="">
 							Parlour Size and Make
 						</StyledLabel>
 						<StyledInput
@@ -173,12 +175,12 @@ const ContactForm = () => {
 						placeholder={"Enter your message"}
 					/>
 				</StyledDiv>
-				<div className="flex gap-2 text-sm text-neutral-400">
+				<div className="flex items-start gap-2 text-sm text-neutral-400">
 					<input
 						id="Agree"
 						{...register("agree", { required: "must be checked" })}
 						type="checkbox"
-						className="cursor-pointer border-neutral-200 ring-black/20"
+						className="mt-1 cursor-pointer border-neutral-200 ring-black/20"
 					/>
 					<label
 						htmlFor="Agree"
