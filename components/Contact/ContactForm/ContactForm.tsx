@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { sendMail } from "../../../utils/email";
 import axios from "axios";
 import { useRecoilState } from "recoil";
-import { contactSuccessState } from "../atom/atom";
+import { contactErrorState, contactSuccessState } from "../atom/atom";
 import { contactModalState } from "../../ContactModal/atom/atom";
 import Spinner from "../../Spinner/Spinner";
 
@@ -42,6 +42,8 @@ const ContactForm = () => {
 	const [contactSuccess, setContactSuccess] =
 		useRecoilState(contactSuccessState);
 
+	const [contactError, setContactError] = useRecoilState(contactErrorState);
+
 	const [contactModal, setContactModal] = useRecoilState(contactModalState);
 
 	const [loading, setLoading] = useState<Boolean>(false);
@@ -60,6 +62,9 @@ const ContactForm = () => {
 				});
 				if (axiosData.success) {
 					setContactSuccess(true);
+					setContactModal(false);
+				} else {
+					setContactError(true);
 					setContactModal(false);
 				}
 				setLoading(false);

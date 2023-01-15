@@ -4,12 +4,18 @@ import sgMail from "@sendgrid/mail";
 import { MailDataRequired } from "@sendgrid/mail/src/mail";
 sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
-export const sendMail = async ({
-	name,
-	email,
-	phone,
-	message,
-}: Record<string, string>) => {
+type mailProps = {
+	name: string;
+	email: string;
+	phone: string;
+	message?: string;
+	eirCode?: string;
+	numOfCows?: string;
+	parlourSizeMake?: string;
+	supplier?: string;
+};
+
+export const sendMail = async ({ name, email, phone, message }: mailProps) => {
 	//@ts-ignore
 	const msg = {
 		from: process.env.SENDER,
