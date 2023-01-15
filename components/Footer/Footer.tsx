@@ -16,7 +16,7 @@ const contactData = {
 	phone: "+353 87 606 4344",
 	mail: "info@dairydata.ie",
 	instagram: "dairydata",
-	facebook: "dairydata",
+	facebook: "people/Dairy-Data/100089008104165/",
 	twitter: "dairy_data",
 };
 
