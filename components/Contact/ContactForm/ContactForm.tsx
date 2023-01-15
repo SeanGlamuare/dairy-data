@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
+import { sendMail } from "../../../utils/email";
+import axios from "axios";
+import { useRecoilState } from "recoil";
+import { contactSuccessState } from "../atom/atom";
+import { contactModalState } from "../../ContactModal/atom/atom";
+import Spinner from "../../Spinner/Spinner";
 
 const StyledLabel = styled.label`
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 16px;
 `;
 
 const StyledDiv = styled.div`
@@ -16,32 +22,65 @@ const StyledDiv = styled.div`
 
 const StyledInput = styled.input`
 	font-size: 14px;
-	padding: 0.5rem;
+	padding: 10px 12px;
 	border-radius: 4px;
 	outline: none;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	::placeholder {
 		color: rgba(0, 0, 0, 0.2);
 		font-weight: bold;
-		font-size: 12px;
+		font-size: 14px;
 	}
 `;
 
 const ContactForm = () => {
-	const { register, handleSubmit } = useForm();
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm();
+	const [contactSuccess, setContactSuccess] =
+		useRecoilState(contactSuccessState);
+
+	const [contactModal, setContactModal] = useRecoilState(contactModalState);
+
+	const [loading, setLoading] = useState<Boolean>(false);
 
 	return (
 		<form
-			onSubmit={handleSubmit((data) => {
+			onSubmit={handleSubmit(async (data) => {
+				setLoading(true);
 				console.log(data);
+				const { data: axiosData } = await axios({
+					method: "POST",
+					url: "/api/contact/sendInfo",
+					data: { data },
+				});
+				if (axiosData.success) {
+					setContactSuccess(true);
+					setContactModal(false);
+				}
+				setLoading(false);
 			})}
+			className=""
 		>
 			<div className="flex flex-col w-full gap-4">
+				<>
+					{!!Object.keys(errors).length && (
+						<div className="text-sm text-red-500 md:text-base">
+							*Please fill out all the required fields
+						</div>
+					)}
+				</>
 				<StyledDiv className="flex flex-col">
-					<StyledLabel className="" htmlFor="name">
-						Name *
+					<StyledLabel
+						className={`${errors.name && "text-red-500 "}`}
+						htmlFor="name"
+					>
+						Name <span className="text-red-500">*</span>
 					</StyledLabel>
 					<StyledInput
+						className=""
 						{...register("name", {
 							required: "This field is required",
 						})}
@@ -51,10 +90,14 @@ const ContactForm = () => {
 				</StyledDiv>
 				<div className="flex flex-col w-full gap-6 lg:flex-row">
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="email" className="">
-							Email *
+						<StyledLabel
+							htmlFor="email"
+							className={`${errors.email && "text-red-500 "}`}
+						>
+							Email <span className="text-red-500">*</span>
 						</StyledLabel>
 						<StyledInput
+							type="email"
 							id="email"
 							{...register("email", {
 								required: "This field is required",
@@ -63,11 +106,15 @@ const ContactForm = () => {
 						/>
 					</StyledDiv>
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="phone" className="">
-							Phone Number *
+						<StyledLabel
+							htmlFor="phone"
+							className={`${errors.phone && "text-red-500 "}`}
+						>
+							Phone Number <span className="text-red-500">*</span>
 						</StyledLabel>
 						<StyledInput
 							id="phone"
+							type="number"
 							{...register("phone", {
 								required: "This field is required",
 							})}
@@ -77,17 +124,17 @@ const ContactForm = () => {
 				</div>
 				<div className="flex flex-col w-full gap-6 lg:flex-row">
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="eircode" className="">
+						<StyledLabel htmlFor="eirCode" className="">
 							Eircode{" "}
 						</StyledLabel>
 						<StyledInput
 							id="eircode"
-							{...register("eircode")}
+							{...register("eirCode")}
 							placeholder={"Enter your eircode"}
 						/>
 					</StyledDiv>
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="noc" className="">
+						<StyledLabel htmlFor="numOfCows" className="">
 							Number of Cows
 						</StyledLabel>
 						<StyledInput
@@ -99,12 +146,12 @@ const ContactForm = () => {
 				</div>
 				<div className="flex flex-col w-full gap-6 lg:flex-row">
 					<StyledDiv className="flex flex-col">
-						<StyledLabel htmlFor="parlour" className="">
+						<StyledLabel htmlFor="parlourSizeMake" className="">
 							Parlour Size and Make
 						</StyledLabel>
 						<StyledInput
 							id="parlour"
-							{...register("parlour")}
+							{...register("parlourSizeMake")}
 							placeholder={"Enter parlour size and make"}
 						/>
 					</StyledDiv>
@@ -124,27 +171,36 @@ const ContactForm = () => {
 					<textarea
 						id="message"
 						{...register("message")}
-						rows={4}
-						className="h-40 p-2 border border-black/10 text-sm rounded outline-none max-h-24 min-h-[6rem] placeholder:text-xs placeholder:font-bold placeholder:text-black/20"
-						minLength={4}
-						maxLength={4}
+						className="h-40 p-2 border border-black/10 text-sm rounded outline-none max-h-24 min-h-[6rem] placeholder:text-sm placeholder:font-bold placeholder:text-black/20"
 						placeholder={"Enter your message"}
 					/>
 				</StyledDiv>
-				<div className="flex gap-2 text-sm text-neutral-400">
+				<div className="flex items-start gap-2 text-sm text-neutral-400">
 					<input
 						id="Agree"
-						{...register("agree")}
+						{...register("agree", { required: "must be checked" })}
 						type="checkbox"
-						className="cursor-pointer border-neutral-200 ring-inset ring-black/20"
+						className="mt-1 cursor-pointer border-neutral-200 ring-black/20"
 					/>
-					<label htmlFor="Agree">
+					<label
+						htmlFor="Agree"
+						className={`${errors.agree && "text-red-500"}`}
+					>
 						I agree that the data I submit will be collected and stored
 					</label>
 				</div>{" "}
-				<div className="w-40">
-					<button className="p-2 px-6 w-36 text-white rounded-full cursor-pointer bg-gradient-to-b from-neutral-600 flex justify-center to-neutral-900 hover:shadow-lg hover:shadow-black/25 active:scale-[.98]">
-						Submit
+				<div className="w-40 h-11">
+					<button
+						disabled={!!loading}
+						className="p-2 px-6 w-full disabled:from-neutral-500 disabled:to-neutral-500 text-white rounded-full disabled:cursor-not-allowed disabled:shadow-none cursor-pointer gradient-btn  flex justify-center  hover:shadow-lg h-full items-center hover:shadow-black/25 active:scale-[.98]"
+					>
+						{!loading ? (
+							"Submit"
+						) : (
+							<div className="scale-[55%] ">
+								<Spinner color={"after:bg-white"} />
+							</div>
+						)}
 					</button>
 				</div>
 			</div>

@@ -7,17 +7,33 @@ import Benefit from "../components/Benefit/Benefit";
 import AboutMR from "../components/AboutMR/AboutMR";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
+import ContactDialog from "../components/contactDialog/contactDialog";
+import ContactModal from "../components/ContactModal/ContactModal";
+import { contactModalState } from "../components/ContactModal/atom/atom";
+import { useRecoilState } from "recoil";
+import ContactSuccess from "../components/ContactSuccess/ContactSuccess";
 
 const Home: NextPage = () => {
+	const [contactModal, setContactModal] = useRecoilState(contactModalState);
+
 	return (
 		<>
-			<Navbar />
-			<Hero />
-			<Why />
-			<Benefit />
-			<AboutMR />
-			<Contact />
-			<Footer />
+			<div
+				className={`flex flex-col tracking-[0.02em] ${
+					contactModal && "hidden md:block"
+				} `}
+			>
+				<Navbar />
+				<Hero />
+				<Why />
+				<Benefit />
+				<ContactDialog />
+				<AboutMR />
+				<Contact />
+				<Footer />
+				<ContactSuccess />
+			</div>
+			<ContactModal />
 		</>
 	);
 };
