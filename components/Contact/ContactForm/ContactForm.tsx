@@ -139,7 +139,7 @@ const ContactForm = () => {
 						</StyledLabel>
 						<StyledInput
 							id="noc"
-							{...register("noc")}
+							{...register("numOfCows")}
 							placeholder={"Enter number of cows"}
 						/>
 					</StyledDiv>
