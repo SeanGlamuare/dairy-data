@@ -7,11 +7,11 @@ const Hero = () => {
 	const [contactModal, setContactModal] = useRecoilState(contactModalState);
 
 	return (
-		<div className="w-full overflow-hidden h-[800px] lg:h-[600px] 2xl:h-[800px] relative">
+		<div className="w-full overflow-hidden h-[800px] lg:h-[600px] 2xl:h-[1000px] relative">
 			<div className="relative hidden w-full h-full lg:block">
 				<Image
 					src={"/front.png"}
-					width={500}
+					width={1500}
 					height={500}
 					alt={"dairy data image"}
 					objectFit={"cover"}

@@ -129,7 +129,7 @@ const ContactForm = () => {
 						</StyledLabel>
 						<StyledInput
 							id="eircode"
-							{...register("eircode")}
+							{...register("eirCode")}
 							placeholder={"Enter your eircode"}
 						/>
 					</StyledDiv>
@@ -151,7 +151,7 @@ const ContactForm = () => {
 						</StyledLabel>
 						<StyledInput
 							id="parlour"
-							{...register("parlour")}
+							{...register("parlourSizeMake")}
 							placeholder={"Enter parlour size and make"}
 						/>
 					</StyledDiv>
