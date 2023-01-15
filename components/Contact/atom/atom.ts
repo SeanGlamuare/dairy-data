@@ -6,6 +6,6 @@ export const contactSuccessState = atom<Boolean>({
 });
 
 export const contactErrorState = atom<Boolean>({
-	key: "contactErrorState",
+	key: "contactErrorsState",
 	default: false,
 });

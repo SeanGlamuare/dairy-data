@@ -10,7 +10,7 @@ const reasons = [
 	},
 	{
 		id: 1,
-		title: "Increase compenstation available for cows",
+		title: "Increase compensation available for cows",
 		body: "Having milk recording records increases the compensation available for cows that have to be culled because of a positive TB reaction.",
 		img: "why3",
 	},
@@ -40,7 +40,7 @@ const Why = () => {
 		>
 			<div className="flex flex-col items-center justify-center w-full xl:max-w-6xl gap-y-12 2xl:max-w-7xl">
 				<h1 className="w-full text-2xl text-left lg:text-4xl">
-					<span className="font-bold ">Why</span> Milk Recording
+					<span className="font-bold ">Why</span> Milk Record?
 				</h1>
 				<article className="flex flex-col w-full gap-x-4 lg:gap-x-16 md:flex-row gap-y-8 md:gap-y-28">
 					<div className="flex flex-col gap-x-8 lg:gap-x-16 gap-y-8 md:gap-y-16">
