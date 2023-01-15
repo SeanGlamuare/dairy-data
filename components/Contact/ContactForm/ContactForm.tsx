@@ -50,11 +50,13 @@ const ContactForm = () => {
 		<form
 			onSubmit={handleSubmit(async (data) => {
 				setLoading(true);
+
+				const { agree, ...prismaData } = data;
 				console.log(data);
 				const { data: axiosData } = await axios({
 					method: "POST",
 					url: "/api/contact/sendInfo",
-					data: { data },
+					data: { data: prismaData },
 				});
 				if (axiosData.success) {
 					setContactSuccess(true);
