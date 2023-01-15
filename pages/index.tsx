@@ -12,6 +12,7 @@ import ContactModal from "../components/ContactModal/ContactModal";
 import { contactModalState } from "../components/ContactModal/atom/atom";
 import { useRecoilState } from "recoil";
 import ContactSuccess from "../components/ContactSuccess/ContactSuccess";
+import ContactError from "../components/ContactError/ContactError";
 
 const Home: NextPage = () => {
 	const [contactModal, setContactModal] = useRecoilState(contactModalState);
@@ -32,6 +33,7 @@ const Home: NextPage = () => {
 				<Contact />
 				<Footer />
 				<ContactSuccess />
+				<ContactError />
 			</div>
 			<ContactModal />
 		</>
