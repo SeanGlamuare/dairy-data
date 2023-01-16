@@ -21,9 +21,9 @@ const ContactModal = () => {
 				<div
 					//@ts-ignore
 					ref={contactModalRef}
-					className="md:fixed relative -bottom-[100px] bg-white   flex justify-center items-center top-0 z-[100] left-0 w-screen md:h-screen  md:bg-black/40"
+					className="md:fixed contactModal scroll-auto relative -bottom-[100px] bg-white   flex justify-center items-center top-0 z-[100] left-0 w-screen md:h-screen  md:bg-black/40"
 				>
-					<div className="w-full sticky top-0  z-[200] max-w-xl px-10 py-10 overflow-y-auto bg-white drop-shadow-lg shadow-lg md:rounded-3xl shadow-black/30">
+					<div className="w-full sticky scroll-auto top-0  z-[200] max-w-xl px-10 py-10 overflow-y-auto bg-white drop-shadow-lg shadow-lg md:rounded-3xl shadow-black/30">
 						<div className="relative top-0 flex flex-col gap-4">
 							<div
 								id="top"
