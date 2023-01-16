@@ -32,7 +32,7 @@ const Navbar = () => {
 			ref={navRef}
 			className={`${
 				scrolled ? "shadow-lg shadow-black/20" : ""
-			} sticky top-0 transition-all duration-200 z-[70] flex justify-center shadow-black w-screen py-8 overflow-hidden bg-white h-14 md:h-20 md:pl-4 xl:px-16 lg:pl-0 lg:h-24 xl:h-32`}
+			} sticky top-0 transition-all duration-200 z-[70] flex justify-center  w-screen py-8 overflow-hidden bg-white h-14 md:h-20 md:pl-4 xl:px-16 lg:pl-0 lg:h-24 xl:h-32`}
 		>
 			<nav className="flex justify-between w-full max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
 				<div className="flex items-center justify-start w-full gap-2 pl-4 title">

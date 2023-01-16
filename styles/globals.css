@@ -61,3 +61,7 @@ body {
 		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 135.74%);
 	}
 }
+
+.contactModal > * {
+	scroll-behavior: none;
+}
