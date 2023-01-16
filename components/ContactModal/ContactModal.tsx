@@ -11,6 +11,10 @@ const ContactModal = () => {
 	const contactModalRef = useRef();
 	const router = useRouter();
 
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<>
 			{contactModal && (
