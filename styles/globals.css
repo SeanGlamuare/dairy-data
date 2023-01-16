@@ -2,15 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-	font-family: "Avenir Next Variable";
-	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2729/AvenirNext_Variable.ttf")
-		format("truetype");
+@layer base {
+	@font-face {
+		font-family: "Avenir";
+		font-weight: 400;
+		src: url(/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+	}
+	@font-face {
+		font-family: "Avenir";
+		font-weight: 700;
+		src: url(/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+	}
 }
 
 html {
 	scroll-behavior: smooth;
-	font-family: "Avenir Next Variable" sans-serif;
+	font-family: "Avenir" sans-serif;
 }
 
 body {
