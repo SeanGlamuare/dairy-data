@@ -7,7 +7,7 @@ const benefits = [
 		id: 0,
 		benefit: "Accurately Identify your poor performing cows",
 		detail:
-			"The production summary report outlines the key milking performance figures for reach individual cow. Your most profitable and least profitable cows are easily identified by the Margin Per Day breakdown.",
+			"The production summary report outlines the key milking performance figures for each individual cow. Your most profitable and least profitable cows are easily identified by the Margin Per Day breakdown.",
 	},
 	{
 		id: 1,
