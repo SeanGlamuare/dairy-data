@@ -6,12 +6,22 @@
 	@font-face {
 		font-family: "Avenir";
 		font-weight: 400;
-		src: url(/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+		src: url("/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
 	}
 	@font-face {
 		font-family: "Avenir";
-		font-weight: 700;
-		src: url(/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+		font-weight: bold;
+		src: url("/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+	}
+	@font-face {
+		font-family: "Avenir";
+		font-weight: 600;
+		src: url("/fonts/Metropolis-SemiBold.otf") format("opentype");
+	}
+	@font-face {
+		font-family: "Avenir";
+		font-weight: 500;
+		src: url("/fonts/Metropolis-Medium.otf") format("opentype");
 	}
 }
 
