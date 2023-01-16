@@ -9,6 +9,20 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<RecoilRoot>
 			<Head>
 				<link rel="shortcut icon" href="/logo.png" />
+				<link
+					rel="preload"
+					href="/fonts/AvenirNextLTPro-Regular.otf"
+					as="font"
+					type="font/otf"
+					crossOrigin="true"
+				/>
+				<link
+					rel="preload"
+					href="/fonts/AvenirNextLTPro-Bold.otf"
+					as="font"
+					type="font/otf"
+					crossOrigin="true"
+				/>
 			</Head>
 			<DefaultSeo
 				title="Dairy Data"
