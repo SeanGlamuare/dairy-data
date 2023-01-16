@@ -23,6 +23,20 @@ function MyApp({ Component, pageProps }: AppProps) {
 					type="font/otf"
 					crossOrigin="true"
 				/>
+				<link
+					rel="preload"
+					href="/fonts/Metropolis-SemiBold.otf"
+					as="font"
+					type="font/otf"
+					crossOrigin="true"
+				/>
+				<link
+					rel="preload"
+					href="/fonts/Metropolis-Medium.otf"
+					as="font"
+					type="font/otf"
+					crossOrigin="true"
+				/>
 			</Head>
 			<DefaultSeo
 				title="Dairy Data"
