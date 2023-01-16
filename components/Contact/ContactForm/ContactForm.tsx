@@ -69,9 +69,9 @@ const ContactForm = () => {
 				}
 				setLoading(false);
 			})}
-			className=""
+			className="relative "
 		>
-			<div className="flex flex-col w-full gap-4">
+			<div id="top" className="sticky top-0 flex flex-col w-full gap-4">
 				<>
 					{!!Object.keys(errors).length && (
 						<div className="text-sm text-red-500 md:text-base">

@@ -19,6 +19,11 @@ const Home: NextPage = () => {
 
 	return (
 		<>
+			{contactModal && (
+				<>
+					<ContactModal />
+				</>
+			)}
 			<div
 				className={`flex flex-col tracking-[0.02em] ${
 					contactModal && "hidden md:block"
@@ -35,7 +40,6 @@ const Home: NextPage = () => {
 				<ContactSuccess />
 				<ContactError />
 			</div>
-			<ContactModal />
 		</>
 	);
 };
