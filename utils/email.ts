@@ -23,6 +23,7 @@ export const sendMail = async ({
 	supplier,
 	eirCode,
 	numOfCows,
+	parlourSizeMake,
 }: mailProps) => {
 	//@ts-ignore
 	const msg = {
@@ -36,6 +37,7 @@ export const sendMail = async ({
 			EirCode: eirCode,
 			NOC: numOfCows,
 			Supplier: supplier,
+			parlourSizeMake,
 			Message: message,
 		},
 	};
