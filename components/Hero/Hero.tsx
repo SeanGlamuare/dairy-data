@@ -11,7 +11,7 @@ const Hero = () => {
 			<div className="relative hidden w-full h-full lg:block">
 				<Image
 					src={"/front.png"}
-					width={1500}
+					width={5500}
 					height={500}
 					quality={100}
 					alt={"dairy data image"}

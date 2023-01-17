@@ -40,8 +40,9 @@ const Navbar = () => {
 						<Image
 							alt={"dairy data logo"}
 							src="/logo.png"
-							width={80.16}
-							height={83}
+							width={72.16}
+							height={72}
+							quality={100}
 							className="hidden lg:block"
 						/>
 					</div>
@@ -51,11 +52,12 @@ const Navbar = () => {
 							src="/logo.png"
 							width={40.16}
 							height={43}
+							quality={100}
 							className="hidden lg:block"
 						/>
 					</div>
 					<h1 className="text-lg tracking-widest md:text-2xl font-semibold leading-3 uppercase xl:text-[28px]">
-						Dairy <span className="text-blue-500">Data</span>
+						Dairy <span className="text-[#0A80D0]">Data</span>
 					</h1>
 				</div>
 				<div className="items-center hidden gap-5 pr-10 lg:flex">
