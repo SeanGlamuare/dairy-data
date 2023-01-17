@@ -25,7 +25,7 @@ const ContactDialog = () => {
 						</div>
 						<div className="flex lg:flex-col lg:hidden">
 							Register your interest with us here today.
-							<>Our team will be in touch as soon as possible.</>
+							<> Our team will be in touch as soon as possible.</>
 						</div>
 					</div>
 				</div>
