@@ -55,15 +55,20 @@ const ContactForm = () => {
 
 				const { agree, ...prismaData } = data;
 				console.log(data);
-				const { data: axiosData } = await axios({
-					method: "POST",
-					url: "/api/contact/sendInfo",
-					data: { data: prismaData },
-				});
-				if (axiosData.success) {
-					setContactSuccess(true);
-					setContactModal(false);
-				} else {
+				try {
+					const { data: axiosData } = await axios({
+						method: "POST",
+						url: "/api/contact/sendInfo",
+						data: { data: prismaData },
+					});
+					if (axiosData.success) {
+						setContactSuccess(true);
+						setContactModal(false);
+					} else {
+						setContactError(true);
+						setContactModal(false);
+					}
+				} catch (err) {
 					setContactError(true);
 					setContactModal(false);
 				}

@@ -15,24 +15,35 @@ type mailProps = {
 	supplier?: string;
 };
 
-export const sendMail = async ({ name, email, phone, message }: mailProps) => {
+export const sendMail = async ({
+	name,
+	email,
+	phone,
+	message,
+	supplier,
+	eirCode,
+	numOfCows,
+}: mailProps) => {
 	//@ts-ignore
 	const msg = {
 		from: process.env.SENDER,
-		to: "eyobmalik@gmail.com",
+		to: process.env.RECEIVER,
 		templateId: process.env.SENDGRID_TEMPLATE_ID,
 		dynamic_template_data: {
 			Customer_Name: name,
 			Customer_Email: email,
 			Customer_Phone: phone,
+			EirCode: eirCode,
+			NOC: numOfCows,
+			Supplier: supplier,
 			Message: message,
 		},
 	};
 
 	try {
 		//@ts-ignore
-		await sgMail.send(msg);
-		console.log("done");
+		const email = await sgMail.send(msg);
+		console.log(email);
 	} catch (err) {
 		console.log(err);
 	}
