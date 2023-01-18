@@ -21,8 +21,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 		});
 		await sendMail(data);
 
-		console.log(user);
-
 		return res.status(200).json({ success: true });
 	} catch (err) {
 		console.log(err);
