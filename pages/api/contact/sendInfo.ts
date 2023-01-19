@@ -20,7 +20,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 		const user = await prisma.contact.create({
 			data,
 		});
-		await sendSocket(data);
+		await sendMail(data);
 
 		return res.status(200).json({ success: true });
 	} catch (err) {
