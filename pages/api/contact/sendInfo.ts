@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { sendMail } from "../../../utils/email";
 import prisma from "../../../lib/client";
+import { sendSocket } from "../../../utils/nodemail";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	const { method } = req;
@@ -19,7 +20,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 		const user = await prisma.contact.create({
 			data,
 		});
-		await sendMail(data);
+		await sendSocket(data);
 
 		return res.status(200).json({ success: true });
 	} catch (err) {
