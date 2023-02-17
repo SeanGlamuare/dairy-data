@@ -27,7 +27,8 @@ ADD COLUMN     "eirCode" TEXT,
 ADD COLUMN     "email" TEXT NOT NULL,
 ADD COLUMN     "message" TEXT,
 ADD COLUMN     "name" TEXT NOT NULL,
-ADD COLUMN     "numOfCows" TEXT,
+ADD COLUMN     "noc" TEXT,
 ADD COLUMN     "parlourSizeMake" TEXT,
 ADD COLUMN     "phone" TEXT NOT NULL,
-ADD COLUMN     "supplier" TEXT;
+ADD COLUMN     "supplier" TEXT,
+ADD COLUMN     "agree" BOOLEAN;

@@ -33,7 +33,6 @@ export const sendMail = async ({
 
 	try {
 		//@ts-ignore
-		console.log('sendgrid start', msg);
 		await sgMail.send(msg);
 		console.log("done");
 	} catch (err) {
