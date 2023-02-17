@@ -11,8 +11,10 @@ const ContactModal = () => {
 	return (
 		<>
 			{contactModal && (
-				<div className="md:fixed absolute bg-white   flex justify-center items-center top-0 z-[100] left-0 w-screen md:h-screen  md:bg-black/40">
-					<div className="w-full   z-[200] max-w-xl px-10 py-10 overflow-y-auto bg-white drop-shadow-lg shadow-lg md:rounded-3xl shadow-black/30">
+				<>
+				<div className="md:fixed absolute bg-white flex justify-center items-center top-0 z-[100] left-0 w-screen md:h-screen  md:bg-black/40">
+					<div className="fixed bg-transparent w-screen h-screen left-0 top-0" onClick={() => setContactModal(false)}></div>
+					<div className="w-full z-[200] max-w-xl px-10 py-10 overflow-y-auto bg-white drop-shadow-lg shadow-lg md:rounded-3xl shadow-black/30">
 						<div className="relative flex flex-col gap-4">
 							<div
 								className="flex justify-end w-full cursor-pointer hover:text-red-500"
@@ -29,6 +31,7 @@ const ContactModal = () => {
 						</div>
 					</div>
 				</div>
+				</>
 			)}
 		</>
 	);

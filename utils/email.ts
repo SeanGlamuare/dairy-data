@@ -8,23 +8,32 @@ export const sendMail = async ({
 	name,
 	email,
 	phone,
+	eirCode,
+	noc,
+	parlourSizeMake,
+	supplier,
 	message,
 }: Record<string, string>) => {
 	//@ts-ignore
 	const msg = {
 		from: process.env.SENDER,
-		to: "eyobmalik@gmail.com",
+		to: process.env.CONTACT_EMAIL,
 		templateId: process.env.SENDGRID_TEMPLATE_ID,
 		dynamic_template_data: {
 			Customer_Name: name,
 			Customer_Email: email,
 			Customer_Phone: phone,
-			Message: message,
+			Customer_Eircode: eirCode,
+			Customer_Number_of_Cows: noc,
+			Customer_Parlour_Size_and_Make: parlourSizeMake,
+			Customer_Supplier: supplier,
+			Customer_Message: message,
 		},
 	};
 
 	try {
 		//@ts-ignore
+		console.log('sendgrid start', msg);
 		await sgMail.send(msg);
 		console.log("done");
 	} catch (err) {
