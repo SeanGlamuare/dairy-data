@@ -20,8 +20,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 			console.log(err);
 			return res.status(500).json({ success: false });
 		});
-		// const contact = await prisma.contact.create({data})
-		// console.log('contact : ', contact)
+		if (process.env.DATABASE_URL) {
+			const contact = await prisma.contact.create({data})
+			console.log('contact : ', contact)
+		}
 		return res.status(200).json({ success: true });
 	} catch (err) {
 		console.log(err);

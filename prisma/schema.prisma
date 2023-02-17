@@ -16,8 +16,9 @@ model Contact {
   email           String
   phone           String
   eirCode         String?
-  numOfCows       String?
+  noc             String?
   parlourSizeMake String?
   supplier        String?
   message         String? @db.Text
+  agree           Boolean?
 }
