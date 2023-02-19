@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContactForm from "../Contact/ContactForm/ContactForm";
 import { FaCross } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
@@ -7,6 +7,13 @@ import { useRecoilState } from "recoil";
 
 const ContactModal = () => {
 	const [contactModal, setContactModal] = useRecoilState(contactModalState);
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setContactModal(true);
+		}, 1000);
+		return () => clearTimeout(timer);
+	}, []);
 
 	return (
 		<>
