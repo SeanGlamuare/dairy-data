@@ -32,7 +32,7 @@ const ContactModal = () => {
 							<div className="text-3xl font-bold">Contact Us</div>
 							<p className="flex text-sm">
 								Register your interest in Milk Recording with us here today.
-								<> Our team will be in touch as soon as possible</>
+								Our team will be in touch as soon as possible
 							</p>
 							<ContactForm />
 						</div>
