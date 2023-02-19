@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
 import { sendMail } from "../../../utils/email";
@@ -46,7 +46,19 @@ const ContactForm = () => {
 
 	const [loading, setLoading] = useState<Boolean>(false);
 
+	const[pageReady, setPageReady] = useState(false)
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setPageReady(true);
+		}, 0);
+		return () => clearTimeout(timer);
+	}, [])
+
 	return (
+		<>
+		{pageReady && (
+		<>
 		<form
 			onSubmit={handleSubmit(async (data) => {
 				setLoading(true);
@@ -205,6 +217,9 @@ const ContactForm = () => {
 				</div>
 			</div>
 		</form>
+		</>
+		)}
+		</>
 	);
 };
 

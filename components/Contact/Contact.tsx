@@ -23,11 +23,9 @@ const Contact = () => {
 					</p>
 					<p className="pr-4 text-sm lg:hidden">
 						Register your interest in Milk Recording with us here today.
-						<> Our team will be in touch as soon as possible.</>
+						Our team will be in touch as soon as possible.
 					</p>
-					<div className="">
-						<ContactForm />
-					</div>
+					<ContactForm />
 				</article>
 			</div>
 		</div>
