@@ -11,7 +11,7 @@ const ContactModal = () => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setContactModal(true);
-		}, 1000);
+		}, 1);
 		return () => clearTimeout(timer);
 	}, []);
 
