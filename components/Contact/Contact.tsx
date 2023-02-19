@@ -21,7 +21,6 @@ const Contact = () => {
 						Register your interest in Milk Recording with us here today.
 						Our team will be in touch as soon as possible
 					</p>
-					<p className="hidden lg:block">Our team will be in touch as soon as possible</p>
 					<p className="pr-4 text-sm lg:hidden">
 						Register your interest in Milk Recording with us here today.
 						<> Our team will be in touch as soon as possible.</>
