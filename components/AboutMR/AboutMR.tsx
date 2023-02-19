@@ -22,7 +22,7 @@ const AboutMR = () => {
 							the milk yield by 406 litres per cow and reduces herd somatic cell
 							count(SCC) by 38,860 cells/ml on average.
 						</p>
-						<p>
+						<div>
 							In percentages, milk recording results in a significant
 							improvement of
 							<ul className="pl-8 list-disc">
@@ -30,7 +30,7 @@ const AboutMR = () => {
 								<li>7% in milk yields</li>
 								<li>25% reduction in SCC</li>
 							</ul>
-						</p>
+						</div>
 						<p>
 							Therefore by achieving such beneficial gains you are improving the
 							product quality, increasing your output while most importantly
