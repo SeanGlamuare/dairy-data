@@ -8,13 +8,6 @@ import { useRecoilState } from "recoil";
 const ContactModal = () => {
 	const [contactModal, setContactModal] = useRecoilState(contactModalState);
 
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setContactModal(true);
-		}, 1);
-		return () => clearTimeout(timer);
-	}, []);
-
 	return (
 		<>
 			{contactModal && (

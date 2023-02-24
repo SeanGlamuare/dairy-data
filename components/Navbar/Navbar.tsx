@@ -36,9 +36,9 @@ const Navbar = () => {
 							className="hidden lg:block"
 						/>
 					</div>
-					<h1 className="text-lg tracking-widest md:text-2xl font-semibold leading-3 uppercase xl:text-[28px]">
-						Dairy <span className="text-blue-500">Data</span>
-					</h1>
+					<div className="text-lg md:text-2xl font-sans leading-3 uppercase xl:text-[28px]">
+						Dairy <span className="text-logo">Data</span>
+					</div>
 				</div>
 				<div className="items-center hidden gap-5 pr-10 lg:flex">
 					{menu.map((tab: { name: string }) => {
