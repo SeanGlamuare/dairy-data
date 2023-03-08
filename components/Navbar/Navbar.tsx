@@ -6,9 +6,18 @@ import Button from "../Contact/Button/Button";
 import Link from "next/link";
 
 const menu = [
-	{ name: "Milk Recording" },
-	{ name: "Benefits" },
-	{ name: "About Us" },
+	{ 
+		name: "Milk Recording",
+		target: '#Milk-Recording'
+	},
+	{ 
+		name: "Benefits",
+		target: '#Benefits'
+	},
+	{ 
+		name: "About Us",
+		target: '#About-Us'
+	},
 ];
 
 const Navbar = () => {
@@ -17,37 +26,39 @@ const Navbar = () => {
 	return (
 		<div className="flex justify-center w-screen py-8 overflow-hidden bg-white h-14 md:h-20 md:pl-4 xl:px-16 lg:pl-0 lg:h-24 xl:h-32">
 			<nav className="flex justify-between w-full max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
-				<div className="flex items-center justify-start w-full gap-2 pl-4 title">
-					<div className="items-center hidden w-max h-max xl:flex">
-						<Image
-							alt={"dairy data logo"}
-							src="/logo.png"
-							width={80.16}
-							height={83}
-							className="hidden lg:block"
-						/>
-					</div>
-					<div className="flex items-center w-max h-max xl:hidden">
-						<Image
-							alt={"dairy data logo"}
-							src="/logo.png"
-							width={40.16}
-							height={43}
-							className="hidden lg:block"
-						/>
-					</div>
-					<div className="text-lg md:text-2xl font-sans leading-3 uppercase xl:text-[28px]">
-						Dairy <span className="text-logo">Data</span>
-					</div>
-				</div>
+				<Link href="/">
+					<a className="flex items-center justify-start w-full gap-2 pl-4 title">
+						<div className="items-center hidden w-max h-max xl:flex">
+							<Image
+								alt={"dairy data logo"}
+								src="/logo.png"
+								width={80.16}
+								height={83}
+								className="hidden lg:block"
+							/>
+						</div>
+						<div className="flex items-center w-max h-max xl:hidden">
+							<Image
+								alt={"dairy data logo"}
+								src="/logo.png"
+								width={40.16}
+								height={43}
+								className="hidden lg:block"
+							/>
+						</div>
+						<div className="text-lg md:text-2xl font-sans leading-3 uppercase xl:text-[28px]">
+							Dairy <span className="text-logo">Data</span>
+						</div>
+					</a>
+				</Link>
 				<div className="items-center hidden gap-5 pr-10 lg:flex">
-					{menu.map((tab: { name: string }) => {
+					{menu.map((tab: { name: string, target: string }) => {
 						return (
 							<div
 								key={tab.name}
 								className="flex duration-[0] justify-center w-max min-w-[110px] font-medium whitespace-nowrap text-black/80 hover:text-black transition-all ease-out cursor-pointer xl:text-base text-sm hover:font-[600] "
 							>
-								<a href={`#${tab.name}`}>{tab.name}</a>
+								<a href={`${tab.target}`}>{tab.name}</a>
 							</div>
 						);
 					})}

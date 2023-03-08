@@ -37,12 +37,14 @@ const Footer = () => {
 			<div className="flex flex-col justify-center w-full max-w-6xl gap-6 py-2 h-76 lg:h-28 text-neutral-400 2xl:max-w-7xl ">
 				<div className="flex flex-col items-center justify-center py-4 lg:justify-between gap-y-6 2xl:gap-x-52 gap-x-20 lg:flex-row">
 					<div className="flex flex-col w-full gap-2 lg:w-max min-w-fit">
-						<div className="flex items-center justify-start w-full gap-2 text-2xl lg:w-max text-neutral-200">
-							<Image src="/logo.png" width={55} height={55} alt="logo" />
-							<div className="text-xl tracking-widest uppercase whitespace-nowrap xl:text-xl">
-								Dairy <span className="text-blue-500">Data</span>
-							</div>
-						</div>
+						<Link href="/">
+							<a className="flex items-center justify-start w-full gap-2 text-2xl lg:w-max text-neutral-200">
+								<Image src="/logo.png" width={55} height={55} alt="logo" />
+								<div className="text-xl tracking-widest uppercase whitespace-nowrap xl:text-xl">
+									Dairy <span className="text-blue-500">Data</span>
+								</div>
+							</a>
+						</Link>
 					</div>
 
 					<div className="flex flex-col flex-wrap items-start justify-center w-full px-2 text-sm gap-x-6 lg:flex-nowrap xl:gap-x-12 gap-y-8 lg:flex-row">

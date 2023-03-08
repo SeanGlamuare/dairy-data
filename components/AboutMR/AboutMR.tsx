@@ -4,7 +4,7 @@ import React from "react";
 const AboutMR = () => {
 	return (
 		<div
-			id="About Us"
+			id="About-Us"
 			className="flex justify-center w-full px-4 mt-10 mb-12 md:mb-20 md:mt-24 md:px-20 "
 		>
 			<div className="flex flex-col items-center w-full max-w-6xl gap-2 gap-y-10 lg:justify-between gap-x-6 lg:flex-row 2xl:max-w-7xl">

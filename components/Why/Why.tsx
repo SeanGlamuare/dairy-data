@@ -35,7 +35,7 @@ const reasons2 = [
 const Why = () => {
 	return (
 		<div
-			id="Milk Recording"
+			id="Milk-Recording"
 			className="flex justify-center w-full gap-12 px-4 py-6 mt-4 overflow-hidden lg:mb-16 md:mt-14 md:px-10 lg:px-20 "
 		>
 			<div className="flex flex-col items-center justify-center w-full xl:max-w-6xl gap-y-12 2xl:max-w-7xl">
