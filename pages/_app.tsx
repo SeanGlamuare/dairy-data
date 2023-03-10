@@ -2,10 +2,14 @@ import { DefaultSeo } from "next-seo";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { RecoilRoot } from "recoil";
+import Head from "next/head"
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<RecoilRoot>
+			<Head>
+				<link rel="icon" type="image/x-icon" href="favicon.ico" />
+			</Head>
 			<DefaultSeo
 				title="Dairy Data"
 				description="Dairy Data is a milk recording company"
