@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<link rel="icon" type="image/x-icon" href="favicon.ico" />
 			</Head>
 			<DefaultSeo
-				title="Dairy Data"
+				title="Dairy Data | Milk Recording Company"
 				description="Dairy Data is a milk recording company"
 				openGraph={{
 					type: "website",
