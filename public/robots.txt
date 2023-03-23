@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://dairydata.ie
+Host: https://www.dairydata.ie
 
 # Sitemaps
-Sitemap: https://dairydata.ie/sitemap.xml
+Sitemap: https://www.dairydata.ie/sitemap.xml
