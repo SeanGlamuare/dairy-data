@@ -6,17 +6,17 @@ module.exports = {
     return [
         await config.transform(config),
         {
-            path: '/#Milk-Recording',
+            loc: '/#Milk-Recording',
             priority: 0.8,
             lastmod: '2023-03-08',
         },
         {
-            path: '/#Benefits',
+            loc: '/#Benefits',
             priority: 0.8,
             lastmod: '2023-03-08',
         },
         {
-            path: '/#About-Us',
+            loc: '/#About-Us',
             priority: 0.8,
             lastmod: '2023-03-08',
         },
